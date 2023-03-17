@@ -1,3 +1,104 @@
-body {
-  background-color: rgba(211, 247, 190, 0.801);
+header {
+    color: black;
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
 }
+.menu {
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.7em;
+    margin-top: 2.3em;
+    margin-left: 1.6em;
+}
+.slogan {
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: black;
+    
+}
+.slogan1 {
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: #000;
+}
+.trending {
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+   }
+   
+   li {
+    float: left;
+   }
+   
+   li a {
+    display: flex;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0.0px 0.1px;
+    text-decoration: none;
+    position:relative;
+    flex-direction: row;
+align-items: flex-end;
+gap: 20px;
+   }
+   
+   li a:hover {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 2.7em;
+    
+   }
+.logoheader {
+background-image: url(logoheader.jpg);
+height: 8em;
+float: left;
+position: left;
+padding-left: 1em;
+padding-top: 0.4em;
+
+}
+.shopping-cart  {
+    height: 2.7em;
+    padding-top: 6.5em;
+    padding-left: 3.1em;
+    opacity: 90%;
+}
+
+.shopping-cart:hover  {
+height: 2.9em;
+opacity: 100%;
+position: absolute;
+
+
+}
+.lemonsjøen {
+    background-image: url(lemonsjøen.jpg);
+    width: 100%;
+    height: auto;
+    padding-top: 2em;
+}
+.product-trend  {
+   display: flex;
+   order: 3;
+   flex-direction: row;
+   justify-content: center;
+   gap: 4em;
+   text-align: center;
+   font-family: Lato,Verdana, Geneva, Tahoma, sans-serif;
+   align-self: center;
+
+}
+
+.contact-form {
+    flex-direction: column;
+}
+
