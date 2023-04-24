@@ -1,78 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RainyDays</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/882a633f3c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <!--Searchfield-->
-   <nav>
-    <a class="logoheader"
-        href="index.html"><img src="images/rainydays_logo.png" alt="Rainydays Logo"></a>
-    <ul>
-        
-        <li><a href="men.html" class="menu">Men</a></li>
-         <li><a href="women.html" class="menu">Women</a></li>
-        <li><a href="kids.html" class="menu">Kids</a></li>
-        <li><a href="about.html" class="menu">About</a></li>
-       <li><a href="contact.html" class="menu">Contact</a></li>
-        <li><img class="shopping-cart"
-        src="images/shopping-cart.svg" alt="Shopping Cart"></li>
-                      
 
-    </ul>
-   </nav>
-    </header>
-    
-    <img class="lemonsjøen" src="images/Lemonsjøen Mona 1.png" alt="Foggy picture with small wooden pier">
-    <h1 class="slogan">Enjoy the outdoors</h1>
-    <h1 class="slogan1">Adventure without worries</h1>
+  <!--Header starts here-->
+<header>
+<img class="logoheader" href="index.html" src="images/rainydays_logo.png" alt="RainyDays Logo">
+  <nav class="navbar">
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="kids.html">Kids</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      <form action="http://127.0.0.1:5501/index.html">
+        <input type="search" name="search" placeholder="Enter Keyword"/>
+        <input type="submit" value="Search">
+
+      </form>
+   
+</nav>
+</header>
+<!--Header stops here-->
+
+<!--Nature img-->
+
+<main>
+  <section class="image-with-text">
+  <img class="lemonsjoen" src="images/Lemonsjoen Mona 1.png" alt="Foggy picture with small wooden pier">
+    <h2 class="slogan"></h2>
+    <p class="bottom-left">Enjoy the outdoors</p>
+    <p class="bottom-left-under">Adventure without worries</p>
+</section>
+    <section class="trending">
     <h2 class="trending">Trending</h2>
+    </section>
 
-    <ol 
-    <li class="product-trend"<h2>Scott 3</h2>
+    <!--Trending products-->
+    <div class="product-container">
+        <div class="product-card"> 
+    <a href="productscott3.html"></a>
+    <img src="products/RainyDays_Jacket4.png" alt="Scott3 - Rugged Jacket">
+    <h3>Scott 3</h3>
     <p>Rugged Jacket</p>
-    <p>150 $</p></li>
+    <p>150 $</p>
+        </div>
 
-    <li class="product-trend"<h2>Labbedal</h2>
-    <p>Rain Overall</p>
-    <p>158 $</p></li>
+        <div class="product-card"> 
+            <a href="productscott3.html"></a>
+    <img src="products/RainyDays_Jacket4.png" alt="Scott3">
+    <h3>Scott 3</h3>
+    <p>Rugged Jacket</p>
+    <p>150 $</p>
+        </div>
+    
+        <div class="product-card">
+            <a href="productscott3.html"></a>
+    <img src="products/RainyDays_Jacket4.png" alt="Scott3">
+    <h3>Scott 3</h3>
+    <p>Rugged Jacket</p>
+    <p>150 $</p>
+</div>
 
-    <li class="product-trend"<h2>Urberg Trek</h2>
-    <p>Wind Jacket</p>
-    <p>152 $</p></li>
-    </ol>
-    <footer>
+</main>
+<div>
+  <h4 class="slogan-middle">Elevate your outdoor game, shop now</h4>
+  </div>
+</body>
+
+
+<footer class="footer">
+  <div class="content">
+    <div class="content-1">
+      <h3>Shop</h3>
+      <ul class="items">
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="content-2">
+      <h3>Info</h3>
+      <ul class="items">
+        <li><a href="about.html">About</a></li>
+        <li><a href="size-chart.html">Size chart</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="socials">
+    <h4>Follow RainyDays</h4>
+    <div class="social-content">
+      <div class="icons">
         <ul>
-            <li><h3 class="shop-button"> Shop</h3></li>
-        <li><a href="men.html" class="footer-menu">Men</a></li>
-         <li><a href="women.html" class="footer-menu">Women</a></li>
-        <li><a href="kids.html" class="footer-menu">Kids</a></li>
-        
-       <li><a href="contact.html" class="footer-menu">Contact</a></li>
-    </ul>
-    <ul>
-        <li><h3>Info</h3></li>
-        <li><a href="about.html" class="footer-menu">About</a></li>
-        <li><a href="size-chart.html" class="footer-menu">Size Chart</a></li>
-    </ul>
-    <ul id="social">
-        <li><img class="twitter"
-            src="images/twitter.svg" alt="twitter-button" ></li>
-            <li><img class="youtube"
-                src="images/social-youtube.svg" alt="youtube-button" ></li>
-                <li><img class="instagram"
-                    src="images/instagram.svg" alt="instagram-button" ></li>
-                    <li><img class="facebook"
-                        src="images/facebook.svg" alt="facebook-button" ></li>
-    </ul>
-    Copyright &copy;
-    </footer>
+          <a href="www.twitter.com"><img src="images/twitter.svg" alt="twitter icon"></a>
+          <a href="www.youtube.com"><img src="images/social-youtube.svg" alt="youtube icon"></a>
+          <a href="www.instagram.com"><img src="images/instagram.svg" alt="instagram icon"></a>
+          <a href="www.facebook.com"><img src="images/facebook.svg" alt="Facebook icon"></a> 
+        </ul>
+      </div>
+      <div class="cpy">
+        <p>&copy; 2023 RainyDays. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
     
 </body>
 </html>

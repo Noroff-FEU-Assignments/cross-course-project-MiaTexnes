@@ -1,104 +1,249 @@
-header {
-    color: black;
-    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-}
-.menu {
-    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.7em;
-    margin-top: 2.3em;
-    margin-left: 1.6em;
-}
-.slogan {
-    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    color: black;
+* {
+    font-family: "Lato",Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     
 }
-.slogan1 {
-    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: #000;
+
+header {
+    color: black;
+    width: 100%;
 }
-.trending {
-    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3em;
-    color: #000;
-    text-decoration: underline;
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ffffff;
-   }
-   
-   li {
-    float: left;
-   }
-   
-   li a {
+
+    
+
+.navbar {
+    padding-bottom: 20px;
     display: flex;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 0.0px 0.1px;
-    text-decoration: none;
-    position:relative;
-    flex-direction: row;
-align-items: flex-end;
-gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-evenly; 
+    height: 165px; 
+}
+header > * {
+    flex: 1;
+    
+}
+
+.navbar a {
+   color: black;
+   text-decoration: none;
+   font-size: 40px;
    }
+
+
+
    
-   li a:hover {
+   nav a:hover {
     color: #000000;
     font-weight: bold;
     text-decoration: underline;
-    font-size: 2.7em;
-    
-   }
+     }
+     a:active {
+        text-decoration: underline;
+     }
 .logoheader {
 background-image: url(logoheader.jpg);
-height: 8em;
+scale: 90%;
 float: left;
-position: left;
-padding-left: 1em;
-padding-top: 0.4em;
-
-}
-.shopping-cart  {
-    height: 2.7em;
-    padding-top: 6.5em;
-    padding-left: 3.1em;
-    opacity: 90%;
+position: static;
 }
 
-.shopping-cart:hover  {
-height: 2.9em;
-opacity: 100%;
-position: absolute;
-
-
+header i {
+    color: black;
 }
-.lemonsjøen {
-    background-image: url(lemonsjøen.jpg);
+
+
+
+
+
+
+
+
+
+ /*Bildet på indekssiden*/
+ main {
+    background-image: url(../images/Lemonsjøen\ Mona\ 1.png);
+    background-repeat: no-repeat;
+}
+.image-with-text {
+    position: relative;
+    text-align: left;
+}
+.lemonsjoen {
     width: 100%;
-    height: auto;
-    padding-top: 2em;
-}
-.product-trend  {
-   display: flex;
-   order: 3;
-   flex-direction: row;
-   justify-content: center;
-   gap: 4em;
-   text-align: center;
-   font-family: Lato,Verdana, Geneva, Tahoma, sans-serif;
-   align-self: center;
-
 }
 
+/*Teksten i bildet på indeks*/
+.bottom-left {
+font-size: 50px;
+color: black;
+padding-left: 60px;
+bottom: 20px;
+position: absolute;
+top: 400px;
+text-decoration: underline;
+}
+
+.bottom-left-under {
+    font-size: 36px;
+    color: black;
+    padding-top: 10px;
+    padding-left: 70px;  
+    font-style: italic;
+    position: absolute;
+    top: 450px;
+}
+
+
+.trending {
+font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+font-size: 70px;
+color: #000;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 25px;
+}
+
+
+/*contact form for the contact page*/
 .contact-form {
-    flex-direction: column;
+display: block;
 }
 
+
+/*Product card/container*/
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30px;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.product-card {
+  flex-basis: calc(33.33% - 2rem); /* gjør manuelt justering*/
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: #dfe8dd;
+  box-shadow: none;
+  text-align: center;
+  border-radius: 10%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+.product-container h3 {
+font-size: 50px;
+text-decoration: none;
+
+}
+/*End produduct container*/
+
+.slogan-middle {
+    font-family: "Lato";
+    font-style: italic;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 1;
+    padding-bottom: 20px;
+}
+
+
+/* Shop list */
+
+.footer{
+  background-color: #dfe8dd;
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.content h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+.content-1{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+.content-1 ul{
+    list-style: none;
+    text-align: center;
+}
+.content-1 a{
+    text-decoration: none;
+    color: #4d4d4d;
+
+}
+
+.content-2{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.content-2 ul{
+    list-style: none;
+    text-align: center;
+}
+.content-2 a{
+    text-decoration: none;
+    color: #4d4d4d;
+}
+.items {
+    font-size: 24px;
+    font-weight: thin;
+}
+.items li:hover {
+    text-decoration: underline;
+}
+.social-content{
+    display: flex;
+    justify-content: space-between;
+    margin:10px 10px 0px 10px;
+    padding: 0px 0px 10px 0px;
+}
+.icons {
+    margin-left: 10px;
+}
+.socials h4{
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.payment-form {
+    display: block;
+}
+
+.contact-form > * {
+flex: 1;
+}
