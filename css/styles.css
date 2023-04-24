@@ -21,6 +21,7 @@ header {
     justify-content: space-evenly; 
     height: 165px; 
 }
+
 header > * {
     flex: 1;
     
@@ -125,7 +126,7 @@ display: block;
 }
 
 .product-card {
-  flex-basis: calc(33.33% - 2rem); /* gjør manuelt justering*/
+  flex-basis: calc(33.33% - 2rem); 
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -247,4 +248,8 @@ text-decoration: none;
 
 .contact-form > * {
 flex: 1;
+}
+
+.thank-you, .shop-again ,.about-page, .kids-page{
+    text-align: center;
 }
