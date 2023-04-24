@@ -63,10 +63,11 @@ header i {
 
 
  /*Bildet på indekssiden*/
- main.lemonsjoen {
+ main .lemonsjoen {
     background-image: url(../images/Lemonsjøen\ Mona\ 1.png);
     background-repeat: no-repeat;
 }
+
 .image-with-text {
     position: relative;
     text-align: left;
