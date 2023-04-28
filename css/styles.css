@@ -100,7 +100,6 @@ text-decoration: underline;
 
 
 .trending {
-font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
 font-size: 70px;
 color: #000;
 text-align: center;
@@ -143,6 +142,16 @@ display: block;
 .product-card:hover {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
+.labbedal-card {
+    flex: 1;
+}
+.labbedal-product-page {
+    flex: 1;
+    text-align: center;
+}
+.labbedal-product-page h2 {
+    font-size: 25px;
+}
 
 .product-image {
   width: 100%;
@@ -165,7 +174,6 @@ text-decoration: none;
 /*End produduct container*/
 
 .slogan-middle {
-    font-family: "Lato";
     font-style: italic;
     text-align: center;
     font-size: 36px;
@@ -251,7 +259,15 @@ text-decoration: none;
 .contact-form > * {
 flex: 1;
 }
-.women-picture, .contact-picture, .about-picture, .men-picture, .kids-picture {
+.women-picture, .contact-picture, .men-picture, .kids-picture {
     width: 100%;
     padding: 20px 20px 40px 20px ;
 }
+
+.about-picture {
+    width: 100%;
+    border-radius: 40px;
+    margin: 60px;
+    position: absolute;
+
+} 
