@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainyDays - Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/882a633f3c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!--Header starts here-->
+<header>
+  <a href="index.html">
+    <img class="logoheader" src="images/rainydays_logo.png" alt="RainyDays Logo">
+    </a>
+  <nav class="navbar">
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="kids.html">Kids</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    
+      
+   
+</nav>
+<a href="cart.html"></a>
+<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      <form action="http://127.0.0.1:5501/index.html">
+        <input type="search" name="search" placeholder="Enter Keyword"/>
+        <input type="submit" value="Search">
+
+      </form>
+</header>
+<!--Header stops here-->
+<main>
+    <h1 class="headline-pages">Cart</h1>
+    <form>
+        <fieldset> 
+       <legend>Payment</legend>
+       <label for="name">Enter name of card holder</label>        
+      <input type="text" name="firstname" id="card-holder" class="payment-form" placeholder="Enter here" required>
+      <label for="card-number">Card number</label>
+      <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="card-number" id="card-number" class="payment-form" placeholder="Fill in here" >
+      <label for="expiration">Expiration date</label>
+      <input type="tel" name="expiration-date" id="expiration-date" class="payment-form" placeholder="Tap here to write" required>
+      <label for="cvc">Cvv code</label>
+      <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv-code" class="payment-form" placeholder="Fill in here" >
+      <p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
+
+      <button class="confirm-payment" >Confirm payment</button>
+      <button class="continue-shopping" >Continue shopping</button>
+     
+    </fieldset>
+    </form>
+
+    <h2 class="in-cart">In my cart</h2>
+    <h3>Labbedal</h3>
+    <p>Kids overall</p>
+    <p>Size 3</p>
+    <p>316 $</p>
+    <div class="quantity-buttons">1-2</div>
+      <button class="buy-now-button">
+<img src="products/Labbedal.png" alt="Labbedal - Rain Overall">
+<h4>Product total</h4>
+<p>316 $</p>
+<h4>Delivery fee</h4>
+<p>10 $</p>
+<h4>Total</h4>
+<p>326 $</p>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="content">
+      <div class="content-1">
+        <h3>Shop</h3>
+        <ul class="items">
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="content-2">
+        <h3>Info</h3>
+        <ul class="items">
+          <li><a href="about.html">About</a></li>
+          <li><a href="size-chart.html">Size chart</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="socials">
+      <h4>Follow RainyDays</h4>
+      <div class="social-content">
+        <div class="icons">
+          <ul>
+            <a href="www.twitter.com"><img src="images/twitter.svg" alt="twitter icon"></a>
+            <a href="www.youtube.com"><img src="images/social-youtube.svg" alt="youtube icon"></a>
+            <a href="www.instagram.com"><img src="images/instagram.svg" alt="instagram icon"></a>
+            <a href="www.facebook.com"><img src="images/facebook.svg" alt="Facebook icon"></a> 
+          </ul>
+        </div>
+        <div class="cpy">
+          <p>&copy; 2023 RainyDays. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+      
+  </body>
+  </html>

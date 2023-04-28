@@ -1,0 +1,257 @@
+* {
+    font-family: "Lato",Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+header {
+    color: black;
+    width: 100%;
+}
+
+    
+
+.navbar {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-evenly; 
+    height: 165px; 
+}
+header > * {
+    flex: 1;
+    
+}
+
+.navbar a {
+   color: black;
+   text-decoration: none;
+   font-size: 20px;
+   }
+
+
+
+   
+   nav a:hover {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+     }
+     a:active {
+        text-decoration: underline;
+     }
+.logoheader {
+background-image: url(logoheader.jpg);
+scale: 90%;
+position: static;
+}
+
+header i {
+    color: black;
+}
+
+.headline-pages {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+ /*Bildet på indekssiden*/
+  .lemonsjoen {
+    background-image: url(../images/Lemonsjoen-Mona1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 150vh;
+    width: 100%;
+    scale: center;
+}
+.lemonsjoen-text {
+position: absolute;
+top: 420px;
+left: 40px;
+text-align: center;
+}
+
+
+
+/*Teksten i bildet på indeks*/
+.bottom-left {
+font-size: 50px;
+color: black;
+text-decoration: underline;
+}
+
+.bottom-left-under {
+    font-size: 36px;
+    color: black; 
+    font-style: italic;
+    
+}
+
+
+.trending {
+font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+font-size: 70px;
+color: #000;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 25px;
+}
+
+
+/*contact form for the contact page*/
+.contact-form {
+display: block;
+}
+
+
+/*Product card/container*/
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30px;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.product-card {
+  flex-basis: calc(33.33% - 2rem);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: #dfe8dd;
+  box-shadow: none;
+  text-align: center;
+  border-radius: 10%;
+  transition: box-shadow 0.3s ease-in-out;
+  flex: 1 0 300px;
+}
+
+
+.product-card:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+.product-container h3 {
+font-size: 50px;
+text-decoration: none;
+
+}
+/*End produduct container*/
+
+.slogan-middle {
+    font-family: "Lato";
+    font-style: italic;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 1;
+    padding-bottom: 40px;
+}
+
+
+/* Shop list */
+
+.footer{
+  background-color: #dfe8dd;
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.content h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+.content-1{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+.content-1 ul{
+    list-style: none;
+    text-align: center;
+}
+.content-1 a{
+    text-decoration: none;
+    color: #4d4d4d;
+
+}
+
+.content-2{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.content-2 ul{
+    list-style: none;
+    text-align: center;
+}
+.content-2 a{
+    text-decoration: none;
+    color: #4d4d4d;
+}
+.items {
+    font-size: 24px;
+    font-weight: thin;
+}
+.items li:hover {
+    text-decoration: underline;
+}
+.social-content{
+    display: flex;
+    justify-content: space-between;
+    margin:10px 10px 0px 10px;
+    padding: 0px 0px 10px 0px;
+}
+.icons {
+    margin-left: 10px;
+}
+.socials h4{
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.payment-form {
+    display: block;
+}
+
+.contact-form > * {
+flex: 1;
+}
+.women-picture, .contact-picture, .about-picture, .men-picture, .kids-picture {
+    width: 100%;
+    padding: 20px 20px 40px 20px ;
+}
