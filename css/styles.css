@@ -53,7 +53,9 @@ header i {
     color: black;
 }
 
-
+.headline-pages {
+    text-align: center;
+}
 
 
 
@@ -62,35 +64,36 @@ header i {
 
 
  /*Bildet på indekssiden*/
- main {
-    background-image: url(../images/Lemonsjøen\ Mona\ 1.png);
+  .lemonsjoen {
+    background-image: url(../images/Lemonsjoen-Mona1.png);
     background-repeat: no-repeat;
-}
-.image-with-text {
+    background-size: cover;
     position: relative;
-    text-align: left;
-}
-.lemonsjoen {
+    min-height: 150vh;
     width: 100%;
+    scale: center;
 }
+.lemonsjoen-text {
+position: absolute;
+top: 420px;
+left: 40px;
+text-align: center;
+}
+
+
 
 /*Teksten i bildet på indeks*/
 .bottom-left {
 font-size: 50px;
 color: black;
-padding-left: 60px;
-bottom: 20px;
-top: 400px;
 text-decoration: underline;
 }
 
 .bottom-left-under {
     font-size: 36px;
-    color: black;
-    padding-top: 10px;
-    padding-left: 70px;  
+    color: black; 
     font-style: italic;
-    top: 450px;
+    
 }
 
 
@@ -121,7 +124,7 @@ display: block;
 }
 
 .product-card {
-  flex-basis: calc(33.33% - 2rem); /* gjør manuelt justering*/
+  flex-basis: calc(33.33% - 2rem);
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -133,9 +136,7 @@ display: block;
   transition: box-shadow 0.3s ease-in-out;
   flex: 1 0 300px;
 }
-.product-card img {
-    width: 100%;
-}
+
 
 .product-card:hover {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
