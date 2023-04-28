@@ -21,7 +21,6 @@ header {
     justify-content: space-evenly; 
     height: 165px; 
 }
-
 header > * {
     flex: 1;
     
@@ -30,7 +29,7 @@ header > * {
 .navbar a {
    color: black;
    text-decoration: none;
-   font-size: 40px;
+   font-size: 20px;
    }
 
 
@@ -47,7 +46,6 @@ header > * {
 .logoheader {
 background-image: url(logoheader.jpg);
 scale: 90%;
-float: left;
 position: static;
 }
 
@@ -64,11 +62,10 @@ header i {
 
 
  /*Bildet på indekssiden*/
- main .lemonsjoen {
+ main {
     background-image: url(../images/Lemonsjøen\ Mona\ 1.png);
     background-repeat: no-repeat;
 }
-
 .image-with-text {
     position: relative;
     text-align: left;
@@ -83,7 +80,6 @@ font-size: 50px;
 color: black;
 padding-left: 60px;
 bottom: 20px;
-position: absolute;
 top: 400px;
 text-decoration: underline;
 }
@@ -94,7 +90,6 @@ text-decoration: underline;
     padding-top: 10px;
     padding-left: 70px;  
     font-style: italic;
-    position: absolute;
     top: 450px;
 }
 
@@ -126,7 +121,7 @@ display: block;
 }
 
 .product-card {
-  flex-basis: calc(33.33% - 2rem); 
+  flex-basis: calc(33.33% - 2rem); /* gjør manuelt justering*/
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -136,6 +131,10 @@ display: block;
   text-align: center;
   border-radius: 10%;
   transition: box-shadow 0.3s ease-in-out;
+  flex: 1 0 300px;
+}
+.product-card img {
+    width: 100%;
 }
 
 .product-card:hover {
@@ -249,7 +248,6 @@ text-decoration: none;
 .contact-form > * {
 flex: 1;
 }
-
-.thank-you, .shop-again ,.about-page, .kids-page{
-    text-align: center;
+.women-picture, .contact-picture, .about-picture, .men-picture, .kids-picture {
+    width: 100%;
 }
