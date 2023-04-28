@@ -55,6 +55,8 @@ header i {
 
 .headline-pages {
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -168,7 +170,7 @@ text-decoration: none;
     text-align: center;
     font-size: 36px;
     font-weight: 1;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 
@@ -251,4 +253,5 @@ flex: 1;
 }
 .women-picture, .contact-picture, .about-picture, .men-picture, .kids-picture {
     width: 100%;
+    padding: 20px 40px 40px 40px ;
 }
