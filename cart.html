@@ -45,17 +45,16 @@
         <fieldset> 
        <legend>Payment</legend>
        <label for="name">Enter name of card holder</label>        
-      <input type="text" name="firstname" id="card-holder" class="payment-form" placeholder="Enter here" required>
+      <input type="text" name="firstname" id="card-holder" class="payment-form" placeholder="Enter here">
       <label for="card-number">Card number</label>
       <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="card-number" id="card-number" class="payment-form" placeholder="Fill in here" >
       <label for="expiration">Expiration date</label>
-      <input type="tel" name="expiration-date" id="expiration-date" class="payment-form" placeholder="Tap here to write" required>
+      <input type="tel" name="expiration-date" id="expiration-date" class="payment-form" placeholder="Tap here to write">
       <label for="cvc">Cvv code</label>
       <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv-code" class="payment-form" placeholder="Fill in here" >
       <p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
-
-      <button class="confirm-payment" >Confirm payment</button>
-      <button class="continue-shopping" >Continue shopping</button>
+      <a href="thankyou.html" class="cta-confirm">Confirm payment</a>
+      <a href="index.html" class="cta-shop" >Continue shopping</a>
      
     </fieldset>
     </form>
