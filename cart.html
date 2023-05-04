@@ -37,42 +37,62 @@
 <!--Header stops here-->
 <main>
     <h1 class="headline-pages">Cart</h1>
-    <form>
-        <fieldset> 
-       <legend>Payment</legend>
-       <label for="name">Enter name of card holder</label>        
-      <input type="text" name="firstname" id="card-holder" class="payment-form" placeholder="Enter here">
-      <label for="card-number">Card number</label>
-      <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="card-number" id="card-number" class="payment-form" placeholder="Fill in here" >
-      <label for="expiration">Expiration date</label>
-      <input type="tel" name="expiration-date" id="expiration-date" class="payment-form" placeholder="Tap here to write">
-      <label for="cvc">Cvv code</label>
-      <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv-code" class="payment-form" placeholder="Fill in here" >
-      <p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
-      <a href="thankyou.html" class="cta-confirm">Confirm payment</a>
-      <a href="index.html" class="cta-shop" >Continue shopping</a>
-     
-    </fieldset>
-    </form>
-
-    <h2 class="in-cart">In my cart</h2>
+    <div class="checkout-page">
+    
+    
+<div  class="in-cart">
+  <h2 class="in-cart-center">In my cart</h2>
+  <div class="in-cart-product-color">
     <h3>Labbedal</h3>
     <p>Kids overall</p>
     <p>Size 3</p>
     <p>316 $</p>
-    <div class="quantity-buttons">1-2</div>
-      <button class="buy-now-button">
-<img src="products/Labbedal.png" alt="Labbedal - Rain Overall">
+    
+  
+    <div class="quantity-buttons">
+    <button>+</button>
+    <button class="quantity-button-1">1</button>
+<button>-</button>
+
+</div>
+<img class="labbedal-image" src="products/Labbedal.png" alt="Labbedal - Rain Overall">
+</div>
+<div class="product-total">
 <h4>Product total</h4>
 <p>316 $</p>
 <h4>Delivery fee</h4>
 <p>10 $</p>
 <h4>Total</h4>
 <p>326 $</p>
+</div>
 
+</div>
+
+<form>
+  <fieldset> 
+ <legend>Payment</legend>
+ <label for="name">Enter name of card holder</label>        
+<input type="text" name="firstname" id="card-holder" class="payment-form" placeholder="Enter here">
+<label for="card-number">Card number</label>
+<input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="card-number" id="card-number" class="payment-form" placeholder="Fill in here" >
+<label for="expiration">Expiration date</label>
+<input type="tel" name="expiration-date" id="expiration-date" class="payment-form" placeholder="Tap here to write">
+<label for="cvc">Cvv code</label>
+<input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv-code" class="payment-form" placeholder="Fill in here" >
+<p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
+<div class="cta-checkout">
+<a href="thankyou.html" class="cta-confirm">Confirm payment</a>
+<a href="index.html" class="cta-shop" >Continue shopping</a>
+</div>
+
+</fieldset>
+</form>
 </main>
 
-
+<img src="images/cart-picture.png" alt="Picture of beatiful nature mirroring the forest in the water" class="cart-picture">
+<div>
+  <h3 class="slogan-middle">Experience the blue sky like never before with our high-quality outdoor clothing</h3>
+</div>
 
 
 

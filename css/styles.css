@@ -12,7 +12,7 @@ header {
   outline: 2px solid #bcbcbc;
   outline-offset: 0px;
   display: flex;
-
+  border-bottom: 2px solid #bcbcbc;
 }
 
 .navbar {
@@ -60,9 +60,8 @@ a:active {
 
 .logoheader {
   background-image: url(logoheader.jpg);
-  scale: 90%;
+  padding: 10px;
   position: static;
- 
 }
 
 header i {
@@ -92,7 +91,7 @@ main .lemonsjoen {
   text-align: center;
   left: 20px;
   bottom: 60px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -113,10 +112,11 @@ main .lemonsjoen {
 }
 
 .trending {
-  font-size: 65px;
+  font-size: 50px;
   color: #000;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 /*contact form for the contact page*/
@@ -182,7 +182,6 @@ main .lemonsjoen {
   object-position: top;
 }
 
-
 .product-image:hover {
   transform: scale(1.1);
 }
@@ -201,13 +200,12 @@ main .lemonsjoen {
   padding-bottom: 40px;
 }
 
-/* Shop list */
+/* Footer */
 .footer {
   background-color: #dfe8dd;
   width: 100%;
   height: 100%;
-  outline: 2px solid #bcbcbc;
-  outline-offset: 0px;
+  border-top: 2px solid #bcbcbc;
 }
 
 .content {
@@ -255,7 +253,6 @@ main .lemonsjoen {
 
 .items {
   font-size: 24px;
-  font-weight: thin;
 }
 
 .items li:hover {
@@ -298,7 +295,7 @@ main .lemonsjoen {
 .kids-picture,
 .labbedal-picture,
 .about-picture,
-.thank-you {
+.thank-you .cart-picture {
   max-width: 100%;
   padding: 20px 20px 40px 20px;
   height: auto;
@@ -309,6 +306,12 @@ main .lemonsjoen {
 
 .about-picture {
   border-radius: 10%;
+}
+.cart-picture {
+  width: 100%;
+}
+.cta-checkout {
+  text-align: center;
 }
 
 .cta-confirm,
@@ -341,29 +344,59 @@ main .lemonsjoen {
   font-weight: bold;
 }
 
-.contact-page {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .contact-info {
   background-color: #bfd4bc;
-  border-radius: 1em;
-  padding: 2em;
+  border-radius: 30px;
+  padding: 40px;
+  margin-left: 10px;
 }
 
-.contact-page,
-fieldset {
-  padding: 1em;
-  align-content: center;
-  align-items: center;
+.contact-page {
+  display: flex;
+  justify-content: center;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
 }
-
+.about-text {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin: 3px 20px 3px 20px;
+}
+.checkout-page {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.in-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.in-cart-center {
+  text-align: center;
+}
+.labbedal-image {
+  height: 150px;
+  background-color: #bfd4bc;
+}
+.in-cart-product-color {
+  width: 100%;
+  background-color: #bfd4bc;
+  display: flex;
+  gap: 30px;
+}
+.quantity-buttons {
+  display: block;
+}
 
 @media screen and (max-width: 1200px) {
   header div {
@@ -374,7 +407,6 @@ fieldset {
     display: flex;
     font-size: 28px;
     gap: 89px;
-    
   }
   nav {
     padding-left: 15px;
@@ -388,10 +420,20 @@ fieldset {
     display: block;
   }
 }
- 
+
 @media screen and (max-width: 824px) {
   .navbar a {
     font-size: 28px;
+  }
+  .socials {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .social-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -407,12 +449,15 @@ fieldset {
     padding-left: 0;
     left: 0;
   }
-    .bottom-left {
+  .bottom-left {
     font-size: 30px;
-    }
-    .bottom-left-under {
-      font-size: 20px;
-    }
+  }
+  .bottom-left-under {
+    font-size: 20px;
+  }
+  .checkout-page {
+    display: block;
+  }
 }
 @media screen and (max-width: 630px) {
   .navbar a {
@@ -423,11 +468,25 @@ fieldset {
   }
 }
 @media screen and (max-width: 500px) {
-  .navbar  {
+  .navbar {
     display: flex;
     flex-direction: column;
-  
+
     height: 100%;
   }
-  
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .in-cart-product-color {
+    width: 100%;
+    background-color: #bfd4bc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  form p {
+    text-align: center;
+  }
 }
