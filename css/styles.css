@@ -10,6 +10,8 @@
 header {
     color: black;
     width: 100%;
+    outline: 2px solid #BCBCBC;
+    outline-offset: 0px;
 }
 
 .navbar {
@@ -24,11 +26,20 @@ header {
 header > * {
     flex: 1;    
 }
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .navbar a {
     color: black;
     text-decoration: none;
     font-size: 20px;
+}
+header i {
+    transform: scale(2);
+    padding: 2px;
 }
 
 nav a:hover {
@@ -69,6 +80,7 @@ header i {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 38px;
 }
 
  /*Bildet på indekssiden*/
@@ -116,7 +128,7 @@ header i {
   }
   @media screen and (min-width: 1100px) {
     nav {
-        gap: 25px;
+        
         padding-left: 15px;
     
     }
@@ -159,8 +171,8 @@ header i {
 
 .product-card {
     margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     padding: 1rem;
     background-color: #dfe8dd;
     box-shadow: none;
@@ -201,7 +213,6 @@ header i {
     height: auto;
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
-    width: 100%;
 }
 
 .product-image:hover {
@@ -218,15 +229,18 @@ header i {
     font-style: italic;
     text-align: center;
     font-size: 36px;
-    font-weight: 1;
+    font-weight: 500;
     padding-bottom: 40px;
 }
+
 
 /* Shop list */
 .footer {
     background-color: #dfe8dd;
     width: 100%;
     height: 100%;
+    outline: 2px solid #BCBCBC;
+    outline-offset: 0px;
 }
 
 .content{
@@ -240,35 +254,35 @@ header i {
     font-size: 40px;
 }
 
-.content-1{
+.shop-list{
     display: flex;
     flex-direction: column;
     text-decoration: none;
     text-align: center; 
 }
 
-.content-1 ul{
+.shop-list ul{
     list-style: none;
     
 }
 
-.content-1 a{
+.shop-list a{
     text-decoration: none;
     color: #4d4d4d;
 }
 
-.content-2{
+.info-list{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.content-2 ul{
+.info-list ul{
     list-style: none;
     text-align: center;
 }
 
-.content-2 a{
+.info-list a{
     text-decoration: none;
     color: #4d4d4d;
 }
@@ -312,16 +326,18 @@ header i {
     flex: 1;
 }
 
-.women-picture, .contact-picture, .men-picture, .kids-picture, .labbedal-picture {
-    width: 100%;
+.women-picture, .contact-picture, .men-picture, .kids-picture, .labbedal-picture, .about-picture, .thank-you {
+    max-width: 100%;
     padding: 20px 20px 40px 20px ;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.about-picture {
-    width: 100%;
-    border-radius: 40px;
-    margin: 60px;
-    position: absolute;
+ .about-picture {
+    border-radius: 10%;
+    
 } 
 
 .cta-confirm, .cta-shop  {
