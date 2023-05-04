@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
 }
 
+/* Header section */
 header {
   color: black;
   width: 100%;
@@ -27,6 +28,7 @@ header {
 header > * {
   flex: 1;
 }
+
 header div {
   display: flex;
   justify-content: center;
@@ -40,10 +42,12 @@ header div {
   text-decoration: none;
   font-size: 40px;
 }
+
 header i {
   transform: scale(2);
   padding: 2px;
 }
+
 .search-label {
   display: none;
 }
@@ -68,14 +72,9 @@ header i {
   color: black;
 }
 
-.headline-pages {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 38px;
-}
+/* End header */
 
-/*Bildet på indekssiden*/
+/*Picture with text on the index*/
 main .lemonsjoen {
   background-image: url("../images/Lemonsjoen-Mona-1.png");
   height: 65vh;
@@ -98,7 +97,7 @@ main .lemonsjoen {
   padding: 5px;
 }
 
-/*Teksten i bildet på indeks*/
+/*Text image on index*/
 .bottom-left {
   font-size: 50px;
   color: black;
@@ -120,9 +119,6 @@ main .lemonsjoen {
 }
 
 /*contact form for the contact page*/
-.contact-form {
-  display: block;
-}
 
 /*Product card/container*/
 .product-container {
@@ -192,12 +188,176 @@ main .lemonsjoen {
 }
 
 /*End produduct container*/
+
+/*Used on multiple pages*/
 .slogan-middle {
   font-style: italic;
   text-align: center;
   font-size: 36px;
   font-weight: 500;
   padding-bottom: 40px;
+}
+
+.headline-pages {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 38px;
+}
+
+.women-picture,
+.contact-picture,
+.men-picture,
+.kids-picture,
+.labbedal-picture,
+.about-picture,
+.thank-you .cart-picture {
+  max-width: 100%;
+  padding: 20px 20px 40px 20px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-picture {
+  border-radius: 10%;
+}
+
+
+/*Cart/checkout page*/
+.cart-picture {
+  width: 100%;
+}
+
+.cta-checkout {
+  text-align: center;
+}
+
+.payment-form {
+  display: block;
+}
+
+.cta-confirm,
+.cta-shop {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+}
+
+.cta-confirm {
+  background-color: #bfd4bc;
+}
+
+.cta-confirm:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.cta-shop {
+  background-color: #eee4b9;
+}
+
+.cta-shop:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.checkout-page {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.in-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.in-cart-center {
+  text-align: center;
+}
+
+.labbedal-image {
+  height: 150px;
+  background-color: #bfd4bc;
+}
+
+.in-cart-product-color {
+  width: 100%;
+  background-color: #bfd4bc;
+  display: flex;
+  gap: 30px;
+}
+
+.quantity-buttons {
+  display: block;
+}
+
+.button-plus {
+  padding: 1px 1.4px 1px 1.4px;
+}
+
+.button-minus {
+  padding: 1.3px 2.5px 1px 2.5px;
+}
+
+.in-cart-product-color p {
+  font-size: 20px;
+}
+
+.in-cart-product-color h3 {
+  font-size: 22px;
+}
+
+.product-total {
+  text-decoration: underline;
+}
+
+/*End cart/checkout page*/
+
+/*Contact page*/
+.contact-info {
+  background-color: #bfd4bc;
+  border-radius: 30px;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.contact-form {
+  display: block;
+}
+
+.contact-form > * {
+  flex: 1;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+/*End contact page*/
+
+.about-text {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin: 3px 20px 3px 20px;
 }
 
 /* Footer */
@@ -280,124 +440,9 @@ main .lemonsjoen {
   margin-left: 10px;
   padding-left: 10px;
 }
+/* Footer end */
 
-.payment-form {
-  display: block;
-}
-
-.contact-form > * {
-  flex: 1;
-}
-
-.women-picture,
-.contact-picture,
-.men-picture,
-.kids-picture,
-.labbedal-picture,
-.about-picture,
-.thank-you .cart-picture {
-  max-width: 100%;
-  padding: 20px 20px 40px 20px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-picture {
-  border-radius: 10%;
-}
-.cart-picture {
-  width: 100%;
-}
-.cta-checkout {
-  text-align: center;
-}
-
-.cta-confirm,
-.cta-shop {
-  color: #000;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1em;
-  padding: 0.3em 1em;
-  border-radius: 1em;
-  margin: 0.5em;
-}
-
-.cta-confirm {
-  background-color: #bfd4bc;
-}
-
-.cta-confirm:hover {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-}
-
-.cta-shop {
-  background-color: #eee4b9;
-}
-
-.cta-shop:hover {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-}
-
-.contact-info {
-  background-color: #bfd4bc;
-  border-radius: 30px;
-  padding: 40px;
-  margin-left: 10px;
-}
-
-.contact-page {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-.about-text {
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-  margin: 3px 20px 3px 20px;
-}
-.checkout-page {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 30px;
-  justify-content: space-around;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-}
-.in-cart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-.in-cart-center {
-  text-align: center;
-}
-.labbedal-image {
-  height: 150px;
-  background-color: #bfd4bc;
-}
-.in-cart-product-color {
-  width: 100%;
-  background-color: #bfd4bc;
-  display: flex;
-  gap: 30px;
-}
-.quantity-buttons {
-  display: block;
-}
-
+/*Start media queries*/
 @media screen and (max-width: 1200px) {
   header div {
     display: flex;
@@ -449,24 +494,30 @@ main .lemonsjoen {
     padding-left: 0;
     left: 0;
   }
+
   .bottom-left {
     font-size: 30px;
   }
+
   .bottom-left-under {
     font-size: 20px;
   }
+
   .checkout-page {
     display: block;
   }
 }
+
 @media screen and (max-width: 630px) {
   .navbar a {
     font-size: 25px;
   }
+
   header .logoheader {
     align-items: center;
   }
 }
+
 @media screen and (max-width: 500px) {
   .navbar {
     display: flex;
@@ -474,10 +525,12 @@ main .lemonsjoen {
 
     height: 100%;
   }
+
   .contact-page {
     display: flex;
     flex-direction: column;
   }
+
   .in-cart-product-color {
     width: 100%;
     background-color: #bfd4bc;
@@ -486,6 +539,7 @@ main .lemonsjoen {
     align-items: center;
     gap: 30px;
   }
+
   form p {
     text-align: center;
   }
