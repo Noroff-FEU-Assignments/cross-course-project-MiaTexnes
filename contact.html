@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RainyDays - Contact</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="description"
+      content="RainyDays is a family business founded by outdoor entusiasts, with the goal of making high quality outdoor clothing">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/882a633f3c.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
   </head>
+
+  <!--Header starts here-->
   <body>
-    <!--Header starts here-->
     <header>
       <a href="index.html">
         <img
           class="logoheader"
           src="images/rainydays_logo.png"
-          alt="RainyDays Logo"
-        />
+          alt="RainyDays Logo">
       </a>
       <nav class="navbar">
         <a href="men.html">Men</a>
@@ -33,14 +36,22 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="cart.html">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i
-      ></a>
-      <form action="http://127.0.0.1:5501/index.html">
-        <input type="search" name="search" placeholder="Enter Keyword" />
-        <input type="submit" value="Search" />
-      </form>
+
+      <div>
+        <a href="cart.html" class="cart-icon">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <form action="/index.html">
+          <label for="search" class="search-label">Search</label>
+          <input
+            type="search"
+            name="search"
+            placeholder="Enter Keyword"
+            id="search">
+          <button>Search</button>
+        </form>
+      </div>
     </header>
+
     <!--Header stops here-->
     <main>
       <h1 class="headline-pages">Contact Us</h1>
@@ -55,16 +66,14 @@
               id="firstname"
               class="contact-form"
               placeholder="Tap here to write"
-              required
-            />
+              required>
             <label for="name">Last name</label>
             <input
               type="text"
               name="lastname"
               id="lastname"
               class="contact-form"
-              placeholder="Tap here to write"
-            />
+              placeholder="Tap here to write">
             <label for="email">Email address</label>
             <input
               type="email"
@@ -72,8 +81,7 @@
               id="email"
               class="contact-form"
               placeholder="Tap here to write"
-              required
-            />
+              required>
             <label for="message">Your message</label>
             <textarea
               id="message"
@@ -82,35 +90,34 @@
               rows="5"
               cols="30"
               placeholder="Tap here to write"
-              required
-            ></textarea>
-            <input type="submit" name="submit" />
+              required>
+            </textarea>
+            <input type="submit" name="submit">
           </fieldset>
         </form>
         <div class="contact-info">
           <h2>Address</h2>
           <p>Rain road <br />5000 Aarau <br />Switzwerland</p>
-          <br />
+          <br>
           <p>Press here for map</p>
           <h2>Email</h2>
           <address><p>rainydays@rainy.com</p></address>
           <h2>Phone</h2>
           <p>+48 35 71 59 25</p>
         </div>
-        
       </section>
     </main>
     <img
       class="contact-picture"
       src="images/contact-picture.png"
-      alt="Picture of two people walking towards a rainbow"
-    />
+      alt="Picture of two people walking towards a rainbow">
     <div>
       <h3 class="slogan-middle">
         Bringing color to your family's outdoor adventures
       </h3>
     </div>
 
+    <!--Footer starts here-->
     <footer>
       <div class="footer">
         <div class="content">
@@ -137,24 +144,20 @@
             <div class="icons">
               <ul>
                 <li>
-                  <a href="www.twitter.com"
-                    ><img src="images/twitter.svg" alt="twitter icon"
-                  /></a>
+                  <a href="https://twitter.com/">
+                    <img src="images/twitter.svg" alt="twitter icon"></a>
                 </li>
                 <li>
-                  <a href="www.youtube.com"
-                    ><img src="images/social-youtube.svg" alt="youtube icon"
-                  /></a>
+                  <a href="https://www.youtube.com/">
+                    <img src="images/social-youtube.svg" alt="youtube icon"></a>
                 </li>
                 <li>
-                  <a href="www.instagram.com"
-                    ><img src="images/instagram.svg" alt="instagram icon"
-                  /></a>
+                  <a href="https://www.instagram.com/">
+                    <img src="images/instagram.svg" alt="instagram icon"></a>
                 </li>
                 <li>
-                  <a href="www.facebook.com"
-                    ><img src="images/facebook.svg" alt="Facebook icon"
-                  /></a>
+                  <a href="https://nb-no.facebook.com/">
+                    <img src="images/facebook.svg" alt="Facebook icon"></a>
                 </li>
               </ul>
             </div>

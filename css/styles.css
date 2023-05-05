@@ -211,7 +211,7 @@ main .lemonsjoen {
 .kids-picture,
 .labbedal-picture,
 .about-picture,
-.thank-you .cart-picture {
+.cart-picture {
   max-width: 100%;
   padding: 20px 20px 40px 20px;
   height: auto;
@@ -220,10 +220,19 @@ main .lemonsjoen {
   margin-right: auto;
 }
 
+.thank-you {
+  max-width: 100%;
+  padding: 20px 20px 40px 20px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .about-picture {
   border-radius: 10%;
 }
-
 
 /*Cart/checkout page*/
 .cart-picture {
