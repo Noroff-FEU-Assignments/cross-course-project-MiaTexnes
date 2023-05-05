@@ -23,10 +23,12 @@ header {
   padding-top: 20px;
   justify-content: space-evenly;
   gap: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 header > * {
-  flex: 1;
+  flex: 0.2;
 }
 
 header div {
@@ -452,6 +454,12 @@ main .lemonsjoen {
 /* Footer end */
 
 /*Start media queries*/
+@media screen and (max-width: 1500px) {
+.navbar a {
+ 
+}
+}
+
 @media screen and (max-width: 1200px) {
   header div {
     display: flex;
