@@ -146,6 +146,7 @@ main .lemonsjoen {
 
 .product-card a:link, a:visited {
   color: #000;
+  text-decoration: none;
 }
 
 .product-card:hover {
@@ -237,6 +238,7 @@ main .lemonsjoen {
   margin-right: auto;
   text-align: center;
 }
+/*
 .back-button {
   max-width: 100%;
   text-align: center;
@@ -245,12 +247,33 @@ main .lemonsjoen {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  margin-bottom: 10px;
   color:white;
   background-color: rgb(175, 48, 48);
   font-weight: bold;
   padding: 5px;
   border-radius: 10px;
+}
+*/
+.back-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+.back-button a {
+  background-color: red;
+  color: white;
+  padding: 4px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.back-button:hover {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
 }
 
 .labbedal-card {
@@ -295,6 +318,9 @@ main .lemonsjoen {
 
 .cta-confirm {
   background-color: #bfd4bc;
+}
+.cta-confirm a {
+  text-decoration: none;
 }
 
 .cta-confirm:hover {
@@ -407,19 +433,7 @@ main .lemonsjoen {
   margin-left: auto;
   margin-right: auto;
 }
-.button-x {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding: 5px;
-  border-radius: 10px;
-  margin-top: 20px;
-  background-color: rgb(175, 48, 48);
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
+
 /*End contact page*/
 
 .about-text {

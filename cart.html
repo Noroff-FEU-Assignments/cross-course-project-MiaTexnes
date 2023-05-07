@@ -33,7 +33,7 @@
 
     <div>
       <a href="cart.html" class="cart-icon" title="shopping cart">
-        <i class="fa fa-shopping-cart" aria-hidden="true" alt="shopping cart icon"></i></a>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       <form action="/index.html">
         <label for="search" class="search-label">Search</label>
         <input type="search" name="search" placeholder="Enter Keyword" id="search">
@@ -60,8 +60,8 @@
             <button class="button-minus">-</button>
           </div>
           <a href="productlabbedal.html">
-          <img class="labbedal-image" src="products/Labbedal.png" alt="Labbedal - Rain Overall">
-        </a>
+            <img class="labbedal-image" src="products/Labbedal.png" alt="Labbedal - Rain Overall">
+          </a>
         </div>
         <div class="product-total">
           <h4>Product total</h4>
@@ -76,27 +76,28 @@
       <form>
         <fieldset>
           <legend class="payment-info">Payment</legend>
-          <label for="name">Enter name of card holder id</label>
-          <input type="text" name="firstname" class="payment-form" placeholder="Enter here" id="name">
+          
+          <label for="card-name">Enter name of card holder id</label>
+          <input type="text" name="card-name" class="payment-form" placeholder="Enter here" id="card-name">          
           <label for="card-number">Card number</label>
-          <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="card-number" class="payment-form"
-            id="card-number" placeholder="Fill in here">
-          <label for="expiration">Expiration date</label>
-          <input type="tel" name="expiration-date" class="payment-form" placeholder="Tap here to write" id="expiration">
+          <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,9}" name="card-number" class="payment-form"
+            id="card-number" placeholder="Fill in here">          
+            <label for="expiration">Expiration date</label>
+          <input type="tel" name="expiration-date" class="payment-form" placeholder="Tap here to write" id="expiration">         
           <label for="cvv">Cvv code</label>
-          <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv" class="payment-form"
+          <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,9}" name="cvv-code" id="cvv" class="payment-form"
             placeholder="Fill in here">
-            <br>
-            <div class="shipping-form">
-              <legend class="shipping-info">Shipping info</legend>
-          <label for="name">Full name</label>
-          <input type="text" name="Fullname" class="shipping-form" placeholder="Enter here" id="name">
-          <label for="adress">Address</label>
-          <input type="text" name="address" class="shipping-form" placeholder="Enter here" id="address" 
-            id="card-number" placeholder="Fill in here">
+          <br>
+        </fieldset>
+        <fieldset>
+          <legend class="shipping-info">Shipping info</legend>
+          <label for="full-name">Full name</label>
+          <input type="text" name="full-name" class="shipping-form" placeholder="Enter here" id="full-name">
+          <label for="address">Address</label>
+          <input type="text" name="address" class="shipping-form" placeholder="Enter here" id="address">
           <label for="telephone">Telephone number</label>
-          <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="telephone" class="shipping-form" placeholder="Tap here to write" id="telephone">
-            </div>
+          <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="telephone" class="shipping-form"
+            placeholder="Tap here to write" id="telephone">
           <p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
           <div class="cta-checkout">
             <a href="thankyou.html" class="cta-confirm">Confirm payment</a>
