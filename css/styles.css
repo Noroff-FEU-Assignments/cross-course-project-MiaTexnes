@@ -37,6 +37,7 @@ header div {
   align-items: center;
   gap: 15px;
   margin-top: 5px;
+  padding-left: 20px;
 }
 
 .navbar a {
@@ -263,7 +264,6 @@ main .lemonsjoen {
   border-radius: 10%;
 }
 
-
 .about-picture {
   border-radius: 10%;
 }
@@ -367,6 +367,12 @@ main .lemonsjoen {
   text-decoration: underline;
 }
 
+.shipping-form {
+  display: block;
+}
+.payment-info, .shipping-info {
+  text-decoration: underline;
+}
 /*End cart/checkout page*/
 
 /*Contact page*/
@@ -506,10 +512,6 @@ main .lemonsjoen {
 /* Footer end */
 
 /*Start media queries*/
-@media screen and (max-width: 1500px) {
-  .navbar a {
-  }
-}
 
 @media screen and (max-width: 1200px) {
   header div {

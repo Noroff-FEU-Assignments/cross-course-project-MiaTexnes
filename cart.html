@@ -69,13 +69,13 @@
           <h4>Delivery fee</h4>
           <p>10 $</p>
           <h4>Total</h4>
-          <p>326 $</p>
+          <p class="price-total">326 $</p>
         </div>
       </div>
 
       <form>
         <fieldset>
-          <legend>Payment</legend>
+          <legend class="payment-info">Payment</legend>
           <label for="name">Enter name of card holder id</label>
           <input type="text" name="firstname" class="payment-form" placeholder="Enter here" id="name">
           <label for="card-number">Card number</label>
@@ -86,6 +86,17 @@
           <label for="cvv">Cvv code</label>
           <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="cvv-code" id="cvv" class="payment-form"
             placeholder="Fill in here">
+            <br>
+            <div class="shipping-form">
+              <legend class="shipping-info">Shipping info</legend>
+          <label for="name">Full name</label>
+          <input type="text" name="Fullname" class="shipping-form" placeholder="Enter here" id="name">
+          <label for="adress">Address</label>
+          <input type="text" name="address" class="shipping-form" placeholder="Enter here" id="address" 
+            id="card-number" placeholder="Fill in here">
+          <label for="telephone">Telephone number</label>
+          <input type="tel" inputmode="numeric" pattern="[0-9\s] {13,9}" name="telephone" class="shipping-form" placeholder="Tap here to write" id="telephone">
+            </div>
           <p>By clicking “Confirm Payment” I agree to company’s terms of service</p>
           <div class="cta-checkout">
             <a href="thankyou.html" class="cta-confirm">Confirm payment</a>
