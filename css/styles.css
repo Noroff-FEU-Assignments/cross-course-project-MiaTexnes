@@ -144,7 +144,8 @@ main .lemonsjoen {
   flex: 1 0 300px;
 }
 
-.product-card a:link, a:visited {
+.product-card a:link,
+a:visited {
   color: #000;
   text-decoration: none;
 }
@@ -397,7 +398,8 @@ main .lemonsjoen {
 .shipping-form {
   display: block;
 }
-.payment-info, .shipping-info {
+.payment-info,
+.shipping-info {
   text-decoration: underline;
 }
 /*End cart/checkout page*/
