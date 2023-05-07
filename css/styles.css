@@ -321,6 +321,7 @@ main .lemonsjoen {
 }
 .cta-confirm a {
   text-decoration: none;
+  color: black;
 }
 
 .cta-confirm:hover {
