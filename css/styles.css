@@ -1,3 +1,8 @@
+@import "apistyles.css";
+@import "top.css";
+@import "contact.css";
+@import "footer.css";
+
 * {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
@@ -5,76 +10,6 @@
   box-sizing: border-box;
   background-repeat: no-repeat;
 }
-
-/* Header section */
-header {
-  color: black;
-  width: 100%;
-  outline: 2px solid #bcbcbc;
-  outline-offset: 0px;
-  display: flex;
-  border-bottom: 2px solid #bcbcbc;
-}
-
-.navbar {
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  justify-content: space-evenly;
-  gap: 30px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-header > * {
-  flex: 0.2;
-}
-
-header div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 5px;
-  padding-left: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  font-size: 40px;
-}
-
-header i {
-  transform: scale(2);
-  padding: 2px;
-}
-
-.search-label {
-  display: none;
-}
-
-nav a:hover {
-  color: #000000;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-}
-
-.logoheader {
-  background-image: url(logoheader.jpg);
-  padding: 10px;
-  position: static;
-}
-
-header i {
-  color: black;
-}
-
-/* End header */
 
 /*Picture with text on the index*/
 main .lemonsjoen {
@@ -120,56 +55,7 @@ main .lemonsjoen {
   padding-top: 10px;
 }
 
-/*contact form for the contact page*/
-
 /*Product card/container*/
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 30px;
-  text-decoration: none;
-}
-
-.product-card {
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 1rem;
-  background-color: #dfe8dd;
-  box-shadow: none;
-  text-align: center;
-  border-radius: 10%;
-  transition: box-shadow 0.3s ease-in-out;
-  flex: 1 0 300px;
-}
-
-.product-card a:link,
-a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.product-card:hover {
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.labbedal-card {
-  flex: 1;
-}
-.labbedal-product-page {
-  flex: 1;
-  text-align: center;
-}
-
-.labbedal-product-page h2 {
-  font-size: 25px;
-}
-
-.labbedal-description {
-  font-size: 20px;
-  font-weight: lighter;
-}
 
 .sizing-boxes {
   font-family: "Times New Roman", Times, serif;
@@ -177,27 +63,6 @@ a:visited {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-.product-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
-  height: 300px;
-  object-fit: contain;
-  object-position: top;
-}
-
-.product-image:hover {
-  transform: scale(1.1);
-}
-
-.product-container h2 {
-  font-size: 50px;
-  text-decoration: none;
-}
-
-/*End produduct container*/
 
 /*Used on multiple pages*/
 .slogan-middle {
@@ -367,34 +232,6 @@ a:visited {
 }
 /*End cart/checkout page*/
 
-/*Contact page*/
-.contact-info {
-  background-color: #bfd4bc;
-  border-radius: 30px;
-  padding: 40px;
-  margin-left: 10px;
-}
-
-.contact-form {
-  display: block;
-}
-
-.contact-form > * {
-  flex: 1;
-}
-
-.contact-page {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-/*End contact page*/
-
 .about-text {
   font-size: 20px;
   font-style: italic;
@@ -402,94 +239,13 @@ a:visited {
   margin: 3px 20px 3px 20px;
 }
 
-/* Footer */
-.footer {
-  background-color: #dfe8dd;
-  width: 100%;
-  height: 100%;
-  border-top: 2px solid #bcbcbc;
-}
-
-.content {
+.product-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 50px;
 }
-
-.content h3 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-
-.shop-list {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  text-align: center;
-}
-
-.shop-list ul {
-  list-style: none;
-}
-
-.shop-list a {
-  text-decoration: none;
-  color: #4d4d4d;
-}
-
-.info-list {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.info-list ul {
-  list-style: none;
-  text-align: center;
-}
-
-.info-list a {
-  text-decoration: none;
-  color: #4d4d4d;
-}
-
-.items {
-  font-size: 24px;
-}
-
-.items li:hover {
-  text-decoration: underline;
-}
-
-.social-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 10px 0px 10px;
-  padding: 0px 0px 10px 0px;
-}
-
-.icons {
-  margin-left: 10px;
-}
-
-.icons ul {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
-
-.socials h4 {
-  margin-left: 10px;
-  padding-left: 10px;
-}
-
-.info-list li {
-  color: #4d4d4d;
-}
-/* Footer end */
 
 /*Start media queries*/
-
 @media screen and (max-width: 1200px) {
   header div {
     display: flex;

@@ -13,11 +13,11 @@ async function getProducts() {
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
-    const firstThreeProducts = products.slice(0, 3);
+    const threeProducts = products.slice(3, 6);
 
-    firstThreeProducts.forEach(function (product) {
+    threeProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
-      <img src="${product.image}" alt="${product.description}" />
+    <img src="${product.image}" alt="${product.description}" />
     <h1>${product.title}</h1>
     <p class="price" >Price: ${product.price}</p>
     <a class="detailButton" href="product.html?id=${product.id}">View details</a>

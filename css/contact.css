@@ -1,0 +1,27 @@
+/*Contact page*/
+.contact-info {
+  background-color: #bfd4bc;
+  border-radius: 30px;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.contact-form {
+  display: block;
+}
+
+.contact-form > * {
+  flex: 1;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*End contact page*/

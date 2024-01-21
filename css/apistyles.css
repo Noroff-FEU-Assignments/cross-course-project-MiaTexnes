@@ -1,0 +1,80 @@
+.card {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 10%;
+  transition: box-shadow 0.3s ease-in-out;
+  font-size: 0.7em;
+}
+
+.card img {
+  /* max-width: 80%; */
+  width: 300px;
+  height: 300px;
+}
+
+body #container-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 20px 0px 20px;
+}
+
+.price {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+
+.detailButton {
+  background-color: #dfe8dd;
+  border: none;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 30px 2px 4px 2px;
+  cursor: pointer;
+  border-radius: 10%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.detailButton:hover {
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardSpecific {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+  width: 60%;
+  height: 60%;
+}
+
+.product-text {
+  flex: 2;
+  font-size: 180%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.card:hover {
+  box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.5);
+}
