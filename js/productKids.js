@@ -13,10 +13,10 @@ async function getProducts() {
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
-    const threeProducts = products;
+    const allProducts = products;
 
-    threeProducts.forEach(function (product) {
-      resultsContainer.innerHTML += `<div class="card card-kids">
+    allProducts.forEach(function (product) {
+      resultsContainer.innerHTML += `<div class="card">
     <img src="${product.image}" alt="${product.description}" />
     <h1>${product.title}</h1>
     <p class="price" >Price: ${product.price}</p>
