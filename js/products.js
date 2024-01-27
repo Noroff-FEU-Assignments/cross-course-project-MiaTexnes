@@ -15,7 +15,7 @@ async function getProducts(gender, containerId) {
             : products.filter((product) => product.gender === gender);
 
 
-    const resultsContainer = document.querySelector(containerId);
+    const resultsContainer = document.querySelector("#container-product");
       resultsContainer.innerHTML = "";
       resultsContainer.classList.add("product-grid");
 
