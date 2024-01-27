@@ -30,7 +30,7 @@ async function getProducts(gender, containerId) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector(containerId);
+    const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
