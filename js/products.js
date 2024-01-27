@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProducts(genders) {
+async function getProducts(gender) {
   try {
     const response = await fetch(url); // Ensure that 'url' is defined correctly
 
@@ -9,8 +9,8 @@ async function getProducts(genders) {
     }
 
     const products = await response.json();
-    const filteredProducts = Array.isArray(genders)
-      ? products.filter((product) => genders.includes(product.gender))
+    const filteredProducts = Array.isArray(gender)
+      ? products.filter((product) => gender.includes(product.gender))
       : products;
 
     const resultsContainer = document.querySelector("#container-product");
