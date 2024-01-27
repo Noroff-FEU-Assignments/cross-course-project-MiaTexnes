@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
 }
 
+body {
+  width: 100vw;
+}
+
 /*Picture with text on the index*/
 main .lemonsjoen {
   background-image: url("../images/Lemonsjoen-Mona-1.png");

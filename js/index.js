@@ -12,6 +12,7 @@ async function getProducts() {
 
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
+    resultsContainer.classList.add("product-grid");
 
     const firstThreeProducts = products.slice(0, 3);
 
