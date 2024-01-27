@@ -8,11 +8,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat
 }
 
 body {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 /*Picture with text on the index*/
