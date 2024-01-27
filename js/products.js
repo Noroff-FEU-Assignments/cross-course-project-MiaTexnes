@@ -9,10 +9,9 @@ async function getProducts(gender) {
     }
 
     const products = await response.json();
-        const filteredProducts =
-          gender === "All"
-            ? products
-            : products.filter((product) => product.gender === gender);
+    const filteredProducts = products.filter(
+      (product) => product.gender === gender
+    );
 
 
     const resultsContainer = document.querySelector("#container-product");
