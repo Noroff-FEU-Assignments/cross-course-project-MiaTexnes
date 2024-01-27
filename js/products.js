@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProducts(gender, container-product) {
+async function getProducts(gender, containerProduct) {
   try {
     const response = await fetch(url);
 
