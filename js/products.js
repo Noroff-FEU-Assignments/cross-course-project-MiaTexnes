@@ -36,21 +36,19 @@ async function getProducts(gender, containerId) {
 }
 
 if (window.location.pathname === "/women.html") {
-  getFemaleProducts("Female", "#container-product");
+  getProducts("Female", "#container-product");
 }
 
 if (
   window.location.pathname === "/men.html") {
-  getMaleProducts("Male", "#container-product");
+  getProducts("Male", "#container-product");
 }
 
 if (window.location.pathname === "/kids.html") {
-  getAllProducts("All", "#container-product");
+  getProducts("All", "#container-product");
 }
 
-getFemaleProducts();
-getMaleProducts();
-getAllProducts();
+
 
 // import { url } from "./constants.js";
 
