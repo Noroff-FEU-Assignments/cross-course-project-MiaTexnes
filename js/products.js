@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProduct(gender, containerProduct) {
+async function getProducts(gender, containerProduct) {
   try {
     const response = await fetch(url);
 
@@ -15,7 +15,7 @@ async function getProduct(gender, containerProduct) {
             : products.filter((product) => product.gender === gender);
 
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector(containerProduct);
       resultsContainer.innerHTML = "";
       resultsContainer.classList.add("product-grid");
 
@@ -30,22 +30,22 @@ async function getProduct(gender, containerProduct) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector(containerProduct);
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
 
 if (window.location.pathname === "/women.html") {
-  getProduct("Female", "#container-product");
+  getProducts("Female", "#container-product");
 }
 
 if (
   window.location.pathname === "/men.html") {
-  getProduct("Male", "#container-product");
+  getProducts("Male", "#container-product");
 }
 
 if (window.location.pathname === "/kids.html") {
-  getProduct("All", "#container-product");
+  getProducts("All", "#container-product");
 }
 
 
