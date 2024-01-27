@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProducts(gender) {
+async function getProducts(gender, containerId) {
   try {
     const response = await fetch(url);
 
@@ -8,14 +8,13 @@ async function getProducts(gender) {
       throw new Error(`HTTP Error! status: ${response.status}`);
     }
 
-    const products = await response.json();
-            const filteredProducts = gender
-              ? products.filter((product) => product.gender === gender)
-              : products;
+    const filteredProducts = genders
+      ? products.filter((product) => genders.includes(product.gender))
+      : products;
 
 
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector("containerId");
       resultsContainer.innerHTML = "";
       resultsContainer.classList.add("product-grid");
 
@@ -30,7 +29,7 @@ async function getProducts(gender) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector("containerId");
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
