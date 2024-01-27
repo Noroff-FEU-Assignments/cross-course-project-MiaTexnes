@@ -45,7 +45,7 @@ if (
 }
 
 if (window.location.pathname === "/kids.html") {
-  getProducts(null, "#container-product");
+  getProducts("Male", "Female", "#container-product");
 }
 
 
