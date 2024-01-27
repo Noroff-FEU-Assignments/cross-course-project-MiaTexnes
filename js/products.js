@@ -15,7 +15,7 @@ async function getProducts(gender, containerProduct) {
             : products.filter((product) => product.gender === gender);
 
 
-    const resultsContainer = document.querySelector(containerProduct);
+    const resultsContainer = document.querySelector("#container-product");
       resultsContainer.innerHTML = "";
       resultsContainer.classList.add("product-grid");
 
@@ -30,7 +30,7 @@ async function getProducts(gender, containerProduct) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector(containerProduct);
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
