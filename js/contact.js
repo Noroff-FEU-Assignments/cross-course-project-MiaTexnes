@@ -7,7 +7,4 @@ document
     const lastName = document.querySelector("#last-name").value;
     const email = document.querySelector("#email").value;
     const message = document.querySelector("#message").value;
-
-    // Now you can do whatever you want with these values
-    // For example, send them to a server
   });
