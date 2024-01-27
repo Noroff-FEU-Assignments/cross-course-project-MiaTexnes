@@ -48,6 +48,9 @@ if (window.location.pathname === "/kids.html") {
   getProducts(null, "#container-product");
 }
 
+getProducts();
+
+
 // import { url } from "./constants.js";
 
 // async function getFemaleProducts() {
