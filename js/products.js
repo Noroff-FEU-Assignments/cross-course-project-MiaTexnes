@@ -9,10 +9,10 @@ async function getProducts(gender, containerId) {
     }
 
     const products = await response.json();
-        const filteredProducts =
-          gender === "All"
-            ? products
-            : products.filter((product) => product.gender === gender);
+            const filteredProducts = gender
+              ? products.filter((product) => product.gender === gender)
+              : products;
+
 
 
     const resultsContainer = document.querySelector(containerId);
@@ -45,7 +45,7 @@ if (
 }
 
 if (window.location.pathname === "/kids.html") {
-  getProducts("All", "#container-product");
+  getProducts(null, "#container-product");
 }
 
 // import { url } from "./constants.js";
