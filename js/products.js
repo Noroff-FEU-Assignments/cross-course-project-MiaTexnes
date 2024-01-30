@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProducts(gender, containerId) {
+async function getProduct(gender, containerId) {
   try {
     const response = await fetch(url);
 
@@ -36,15 +36,15 @@ async function getProducts(gender, containerId) {
 }
 
 if (window.location.pathname === "/women.html") {
-  getProducts(["Female"], "#container-product");
+  getProduct(["Female"], "#container-product");
 }
 
 if (window.location.pathname === "/men.html") {
-  getProducts(["Male"], "#container-product");
+  getProduct(["Male"], "#container-product");
 }
 
 if (window.location.pathname === "/kids.html") {
-  getProducts(["Male", "Female"], "#container-product");
+  getProduct(["Male", "Female"], "#container-product");
 }
 
 // import { url } from "./constants.js";
