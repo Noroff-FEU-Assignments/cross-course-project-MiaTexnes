@@ -9,9 +9,11 @@ async function getProducts(gender, containerId) {
     }
 
     const products = await response.json();
+    console.log(products);
     const filteredProducts = products.filter((product) =>
       gender.includes(product.gender)
     );
+    console.log(filteredProducts);
 
     const resultsContainer = document.querySelector(containerId);
     resultsContainer.innerHTML = "";
