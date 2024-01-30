@@ -1,32 +1,42 @@
 import { url } from "./constants.js";
 
-async function getProduct(gender, containerId) {
+async function getProducts(gender, containerId) {
   try {
     const response = await fetch(url);
 
-    if (response.ok !== true) {
+    if (!response.ok) {
       throw new Error(`HTTP Error! status: ${response.status}`);
     }
 
     const products = await response.json();
     console.log(products);
-    const filteredProducts = products.filter((product) =>
-      gender.includes(product.gender)
-    );
+
+    let filteredProducts;
+    if (gender === "All") {
+      filteredProducts = products.filter(
+        (product) => product.tags && product.tags.includes("jacket")
+      );
+    } else {
+      filteredProducts = products.filter(
+        (product) => product.gender === gender
+      );
+    }
     console.log(filteredProducts);
 
     const resultsContainer = document.querySelector(containerId);
     resultsContainer.innerHTML = "";
     resultsContainer.classList.add("product-grid");
 
+    let content = ""; // Initialize content as an empty string
     filteredProducts.forEach(function (product) {
-      resultsContainer.innerHTML += `<div class="card">
+      content += `<div class="card">
         <img src="${product.image}" alt="${product.description}" />
         <h1>${product.title}</h1>
-        <p class="price" >Price: ${product.price}</p>
+        <p class="price">Price: ${product.price}</p>
         <a class="detailButton" href="product.html?id=${product.id}">View details</a>
       </div>`;
     });
+    resultsContainer.innerHTML = content; // Assign the content in one operation
   } catch (error) {
     console.error("Error fetching products:", error);
 
@@ -35,17 +45,19 @@ async function getProduct(gender, containerId) {
   }
 }
 
-if (window.location.pathname === "/women.html") {
-  getProduct(["Female"], "#container-product");
-}
+document.addEventListener("DOMContentLoaded", (event) => {
+  if (window.location.pathname === "/women.html") {
+    getProducts("Female", "#container-product");
+  }
 
-if (window.location.pathname === "/men.html") {
-  getProduct(["Male"], "#container-product");
-}
+  if (window.location.pathname === "/men.html") {
+    getProducts("Male", "#container-product");
+  }
 
-if (window.location.pathname === "/kids.html") {
-  getProduct(["Male", "Female"], "#container-product");
-}
+  if (window.location.pathname === "/kids.html") {
+    getProducts("All", "#container-product");
+  }
+});
 
 // import { url } from "./constants.js";
 
