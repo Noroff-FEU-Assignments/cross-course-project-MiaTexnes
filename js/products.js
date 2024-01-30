@@ -1,61 +1,50 @@
 import { url } from "./constants.js";
 
-async function getProducts(gender, containerId) {
+async function getProducts(tags, containerId) {
   try {
     const response = await fetch(url);
 
-    if (!response.ok) {
+    if (response.ok !== true) {
       throw new Error(`HTTP Error! status: ${response.status}`);
     }
 
     const products = await response.json();
-    console.log(products);
 
-    let filteredProducts;
-    if (gender === "All") {
-      filteredProducts = products.filter(
-        (product) => product.tags && product.tags.includes("jacket")
-      );
-    } else {
-      filteredProducts = products.filter(
-        (product) => product.gender === gender
-      );
-    }
-    console.log(filteredProducts);
+    // Filter products for the given tag
+    const filteredProducts = products.filter(
+      (product) => product.tags && product.tags.includes(tags)
+    );
 
-    const resultsContainer = document.querySelector(containerId);
+    const resultsContainer = document.querySelector(containerId, "#container-product");
     resultsContainer.innerHTML = "";
-    resultsContainer.classList.add("product-grid");
 
-    let content = ""; // Initialize content as an empty string
     filteredProducts.forEach(function (product) {
-      content += `<div class="card">
-        <img src="${product.image}" alt="${product.description}" />
-        <h1>${product.title}</h1>
-        <p class="price">Price: ${product.price}</p>
-        <a class="detailButton" href="product.html?id=${product.id}">View details</a>
-      </div>`;
+      resultsContainer.innerHTML += `<div class="card">
+      <img src="${product.image}" alt="${product.description}" />
+    <h1>${product.title}</h1>
+    <p class="price" >Price: ${product.price}</p>
+    <a class="detailButton" href="product.html?id=${product.id}">View details</a>
+  </div>`;
     });
-    resultsContainer.innerHTML = content; // Assign the content in one operation
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector(containerId);
+    const resultsContainer = document.querySelector(containerId, "#container-product");
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
   if (window.location.pathname === "/women.html") {
-    getProducts("Female", "#container-product");
+    getProducts("womens", "#container-product");
   }
 
   if (window.location.pathname === "/men.html") {
-    getProducts("Male", "#container-product");
+    getProducts("mens", "#container-product");
   }
 
   if (window.location.pathname === "/kids.html") {
-    getProducts("All", "#container-product");
+    getProducts("jacket", "#container-product");
   }
 });
 
