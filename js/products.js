@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 
-async function getProducts(gender) {
+async function getProducts(gender, containerId) {
   try {
     const response = await fetch(url);
 
@@ -9,14 +9,13 @@ async function getProducts(gender) {
     }
 
     const products = await response.json();
-    const filteredProducts = products.filter(
-      (product) => product.gender === gender
+    const filteredProducts = products.filter((product) =>
+      gender.includes(product.gender)
     );
 
-
     const resultsContainer = document.querySelector("#container-product");
-      resultsContainer.innerHTML = "";
-      resultsContainer.classList.add("product-grid");
+    resultsContainer.innerHTML = "";
+    resultsContainer.classList.add("product-grid");
 
     filteredProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
@@ -29,25 +28,72 @@ async function getProducts(gender) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector(containerProduct);
+    const resultsContainer = document.querySelector(containerId);
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
 
 if (window.location.pathname === "/women.html") {
-  getProducts("Female", "#container-product");
+  getProducts(["Female"], "#container-product");
 }
 
-if (
-  window.location.pathname === "/men.html") {
-  getProducts("Male", "#container-product");
+if (window.location.pathname === "/men.html") {
+  getProducts(["Male"], "#container-product");
 }
 
 if (window.location.pathname === "/kids.html") {
-  getProducts("All", "#container-product");
+  getProducts(["Male", "Female"], "#container-product");
 }
 
+// import { url } from "./constants.js";
 
+// async function getProducts(product) {
+//   try {
+//     const response = await fetch(url);
+
+//     if (response.ok !== true) {
+//       throw new Error(`HTTP Error! status: ${response.status}`);
+//     }
+
+//     const products = await response.json();
+//     const filteredProducts = products.filter(
+//       (product) => product.gender === gender
+//     );
+
+//     const resultsContainer = document.querySelector("#container-product");
+//       resultsContainer.innerHTML = "";
+//       resultsContainer.classList.add("product-grid");
+
+//     filteredProducts.forEach(function (product) {
+//       resultsContainer.innerHTML += `<div class="card">
+//         <img src="${product.image}" alt="${product.description}" />
+//         <h1>${product.title}</h1>
+//         <p class="price" >Price: ${product.price}</p>
+//         <a class="detailButton" href="product.html?id=${product.id}">View details</a>
+//       </div>`;
+//     });
+//   } catch (error) {
+//     console.error("Error fetching products:", error);
+
+//     const resultsContainer = document.querySelector("#container-Product");
+//     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
+//   }
+// }
+
+// if (window.location.pathname === "/women.html") {
+//   getProducts("Female", "#container-product");
+// }
+
+// if (
+//   window.location.pathname === "/men.html") {
+//   getProducts("Male", "#container-product");
+// }
+
+// if (window.location.pathname === "/kids.html") {
+//   getProducts("All", "#container-product");
+// }
+
+// getProducts();
 
 // import { url } from "./constants.js";
 
