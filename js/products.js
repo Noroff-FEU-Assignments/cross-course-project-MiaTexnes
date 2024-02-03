@@ -34,20 +34,25 @@ async function getProductsByGender(gender) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname === "/women.html") {
+function handlePageChange() {
+  const pathname = window.location.pathname;
+
+  if (pathname === "/women.html") {
     getProductsByGender("Female");
   }
 
-  if (window.location.pathname === "/men.html") {
+  if (pathname === "/men.html") {
     getProductsByGender("Male");
   }
 
-  if (window.location.pathname === "/kids.html") {
+  if (pathname === "/all.html") {
     getProductsByGender("Female");
     getProductsByGender("Male");
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", handlePageChange);
+window.addEventListener("popstate", handlePageChange);
 
 // async function getProducts(tags, containerId) {
 //   try {
@@ -92,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //     getProducts("mens", "#container-product");
 //   }
 
-//   if (window.location.pathname === "/kids.html") {
+//   if (window.location.pathname === "/all.html") {
 //     getProducts("jacket", "#container-product");
 //   }
 // });
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //   getProducts("Male", "#container-product");
 // }
 
-// if (window.location.pathname === "/kids.html") {
+// if (window.location.pathname === "/all.html") {
 //   getProducts("All", "#container-product");
 // }
 
@@ -257,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //   }
 // }
 
-// if (window.location.pathname === "/kids.html") {
+// if (window.location.pathname === "/all.html") {
 //   getAllProducts();
 // }
 
