@@ -29,7 +29,7 @@ async function getProductsByGender(gender) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector("#container");
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
@@ -37,11 +37,11 @@ async function getProductsByGender(gender) {
 function handlePageChange() {
   const pathname = window.location.pathname;
 
-  if (pathname === "/women.html") {
+  if (pathname === "/women") {
     getProductsByGender("Female");
   }
 
-  if (pathname === "/men.html") {
+  if (pathname === "/men") {
     getProductsByGender("Male");
   }
 }
