@@ -44,6 +44,9 @@ function handlePageChange() {
   if (pathname === "/men") {
     getProductsByGender("Male");
   }
+  if (pathname === "/all") {
+    getProductsByGender("All");
+  }
 }
 
 document.addEventListener("DOMContentLoaded", handlePageChange);
