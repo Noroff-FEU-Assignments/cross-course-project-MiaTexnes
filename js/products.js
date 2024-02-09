@@ -45,7 +45,7 @@ function handlePageChange() {
     getProductsByGender("Male");
   }
   if (pathname === "/all") {
-    getProductsByGender("All");
+    getProductsByGender("women, men");
   }
 }
 
