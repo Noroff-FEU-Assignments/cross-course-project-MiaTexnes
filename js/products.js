@@ -29,7 +29,7 @@ async function getProductsByGender(gender) {
   } catch (error) {
     console.error("Error fetching products:", error);
 
-    const resultsContainer = document.querySelector("#container");
+    const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
 }
