@@ -1,5 +1,6 @@
 import { url } from "./constants.js";
-async function getProductsByGender(genders) {
+
+async function getProductsByGender(gender) {
   try {
     const response = await fetch(url);
 
@@ -7,13 +8,24 @@ async function getProductsByGender(genders) {
       throw new Error(`HTTP Error! status: ${response.status}`);
     }
 
-    let products = await response.json();
+    const products = await response.json();
 
-    if (genders.length > 0) {
-      products = products.filter((product) => genders.includes(product.gender));
-    }
+    const filteredProducts = products.filter(
+      (product) => product.gender === gender
+    );
 
-    // ... rest of your code
+    const resultsContainer = document.querySelector("#container-product");
+    resultsContainer.innerHTML = "";
+    resultsContainer.classList.add("product-grid");
+
+    filteredProducts.forEach(function (product) {
+      resultsContainer.innerHTML += `<div class="card">
+        <img src="${product.image}" alt="${product.description}" />
+        <h1>${product.title}</h1>
+        <p class="price">Price: ${product.price}</p>
+        <a class="detailButton" href="product.html?id=${product.id}">View details</a>
+      </div>`;
+    });
   } catch (error) {
     console.error("Error fetching products:", error);
 
@@ -26,72 +38,19 @@ function handlePageChange() {
   const pathname = window.location.pathname;
 
   if (pathname === "/women") {
-    getProductsByGender(["Female"]);
+    getProductsByGender("Female");
   }
 
   if (pathname === "/men") {
-    getProductsByGender(["Male"]);
+    getProductsByGender("Male");
   }
-
   if (pathname === "/all") {
-    getProductsByGender([]); // pass an empty array to show all products
+    getProductsByGender("[]");
   }
 }
 
 document.addEventListener("DOMContentLoaded", handlePageChange);
 window.addEventListener("popstate", handlePageChange);
-
-// async function getProductsByGender(gender) {
-//   try {
-//     const response = await fetch(url);
-
-//     if (!response.ok) {
-//       throw new Error(`HTTP Error! status: ${response.status}`);
-//     }
-
-//     const products = await response.json();
-
-//     const filteredProducts = products.filter(
-//       (product) => product.gender === gender
-//     );
-
-//     const resultsContainer = document.querySelector("#container-product");
-//     resultsContainer.innerHTML = "";
-//     resultsContainer.classList.add("product-grid");
-
-//     filteredProducts.forEach(function (product) {
-//       resultsContainer.innerHTML += `<div class="card">
-//         <img src="${product.image}" alt="${product.description}" />
-//         <h1>${product.title}</h1>
-//         <p class="price">Price: ${product.price}</p>
-//         <a class="detailButton" href="product.html?id=${product.id}">View details</a>
-//       </div>`;
-//     });
-//   } catch (error) {
-//     console.error("Error fetching products:", error);
-
-//     const resultsContainer = document.querySelector("#container");
-//     resultsContainer.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
-//   }
-// }
-
-// function handlePageChange() {
-//   const pathname = window.location.pathname;
-
-//   if (pathname === "/women") {
-//     getProductsByGender("Female");
-//   }
-
-//   if (pathname === "/men") {
-//     getProductsByGender("Male");
-//   }
-//   if (pathname === "/all") {
-//     getProductsByGender("women, men");
-//   }
-// }
-
-// document.addEventListener("DOMContentLoaded", handlePageChange);
-// window.addEventListener("popstate", handlePageChange);
 
 // async function getProducts(tags, containerId) {
 //   try {
