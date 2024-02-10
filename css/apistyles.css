@@ -22,11 +22,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin-bottom: 20px;
 }
 
 .product-grid .card {
   flex: 0 0 calc(33.33% - 10px); /* 33.33% for 3 items in a row, 10px for some space between the items */
   margin-bottom: 20px; /* Add some vertical space between the rows */
+  margin-bottom: 20px;
 }
 
 .price {
@@ -98,6 +100,13 @@ h2 {
   .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .product-grid .card{
+    width: 450px;
+    margin: auto;
   }
 
 }
@@ -110,7 +119,7 @@ h2 {
     align-items: center;
   }
   .product-grid .card{
-    max-width: 380px;
+    width: 450px;
     margin: auto;
 
   }
@@ -125,6 +134,9 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
+  .product-grid .card{
+    width: 350px;
+    margin: auto;
   }
 
 
