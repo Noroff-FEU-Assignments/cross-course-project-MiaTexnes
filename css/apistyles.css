@@ -93,3 +93,33 @@ h2 {
 .card:hover {
   box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 1200px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 1045px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 824px) {
+}
+@media screen and (max-width: 770px) {
+}
+
+@media screen and (max-width: 630px) {
+}
+
+@media screen and (max-width: 500px) {
+  }
+
+
+
+
