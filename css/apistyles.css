@@ -106,6 +106,13 @@ h2 {
   .product-grid {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-grid .card{
+    max-width: 380px;
+    margin: auto;
+
   }
 }
 
