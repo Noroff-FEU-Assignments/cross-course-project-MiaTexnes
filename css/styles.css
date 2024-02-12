@@ -11,8 +11,6 @@
   background-repeat: no-repeat
 }
 
-button:not([class^="_hj"])
-
 body {
   width: 100vw;
   overflow-x: hidden;
