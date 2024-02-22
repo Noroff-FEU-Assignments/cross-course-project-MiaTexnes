@@ -18,7 +18,7 @@ async function getProducts() {
 
         firstThreeProducts.forEach(function (product) {
             resultsContainer.innerHTML += `
-    <a class="hovercard"  href="product.html?id=${product.id}">
+    <a   href="product.html?id=${product.id}">
       <div class="card">
         <img src="${product.image}" alt="${product.description}" />
         <h1>${product.title}</h1>
