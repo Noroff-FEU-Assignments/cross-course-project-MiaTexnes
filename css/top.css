@@ -39,13 +39,17 @@ header div {
   color: #000000;
 }
 
-header i {
-  transform: scale(2);
+nav i {
+  transform: scale(1);
   padding: 2px;
 }
 
 .search-label {
   display: none;
+}
+
+.searchField {
+  background-color: white;
 }
 
 nav a:hover {
@@ -63,7 +67,7 @@ nav a:hover {
   position: static;
 }
 
-header i {
+nav i {
   color: black;
 }
 
