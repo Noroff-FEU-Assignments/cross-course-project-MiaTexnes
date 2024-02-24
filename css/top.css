@@ -2,10 +2,10 @@
 header {
   color: black;
   width: 100%;
-  outline: 2px solid #bcbcbc;
+  /* outline: 2px solid #bcbcbc; */
   outline-offset: 0px;
   display: flex;
-  border-bottom: 2px solid #bcbcbc;
+  /* border-bottom: 2px solid #bcbcbc; */
   background-color: #dfe8dd;
 }
 
