@@ -408,15 +408,15 @@ main .lemonsjoen {
 
 .hamburger-menu {
   position: absolute;
-  top: 15%;
+  top: 8%;
   right: 8%;
-  font-size: 2rem;
+  font-size: 3rem;
   z-index: 10;
 }
 
 .hamburger-menu-close {
   position: absolute;
-  top: 15%;
+  top: 8%;
   right: 8%;
   font-size: 2rem;
   display: none;
