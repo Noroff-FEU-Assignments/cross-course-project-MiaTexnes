@@ -345,7 +345,6 @@ main .lemonsjoen {
   .navbar {
     display: flex;
     flex-direction: column;
-
     height: 100%;
   }
 
@@ -392,7 +391,7 @@ main .lemonsjoen {
   padding: 25px 15px;
   text-decoration: none;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #dfe8dd;
   color: black;
   font-weight: bold;
 }
@@ -412,15 +411,17 @@ main .lemonsjoen {
   right: 8%;
   font-size: 3rem;
   z-index: 10;
+  padding-left: 10px;
 }
 
 .hamburger-menu-close {
   position: absolute;
   top: 8%;
   right: 8%;
-  font-size: 2rem;
+  font-size: 3rem;
   display: none;
   z-index: 10;
+  padding-left: 10px;
 }
 }
 

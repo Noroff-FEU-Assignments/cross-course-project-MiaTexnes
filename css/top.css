@@ -6,10 +6,12 @@ header {
   outline-offset: 0px;
   display: flex;
   border-bottom: 2px solid #bcbcbc;
+  background-color: #dfe8dd;
 }
 
 .navbar {
   padding-bottom: 20px;
+  padding-left: 5%;
   display: flex;
   align-items: center;
   padding-top: 20px;
@@ -49,7 +51,7 @@ nav i {
 }
 
 .searchField {
-  background-color: white;
+  background-color: #dfe8dd;
 }
 
 nav a:hover {
