@@ -54,6 +54,10 @@ nav i {
   background-color: #dfe8dd;
 }
 
+#search {
+  width: 110px;
+}
+
 nav a:hover {
   color: #000000;
   font-weight: bold;
