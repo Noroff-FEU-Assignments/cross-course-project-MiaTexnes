@@ -34,10 +34,13 @@
             sizes="16x16"
             href="images/favicon-16x16.png"
         />
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32.png" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script src="/js/cart.js" type="module"></script>
+        <script src="js/allPages.js" type="module"></script>
         <!-- Hotjar Tracking Code for Rainy Days -->
         <script>
             (function (h, o, t, j, a, r) {
@@ -71,19 +74,22 @@
                     alt="RainyDays Logo"
                 />
             </a>
+             <i id="open" class="hamburger-menu">
+        <iconify-icon icon="pajamas:hamburger"></iconify-icon>
+      </i>
+      <i id="close" class="hamburger-menu-close">
+        <iconify-icon icon="pajamas:close"></iconify-icon>
+      </i>
             <nav class="navbar">
                 <a href="men.html">Men</a>
                 <a href="women.html">Women</a>
                 <a href="all.html">All</a>
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="contact.html">Contact</a>
-            </nav>
-
-            <div>
                 <a href="cart.html" class="cart-icon" title="shopping cart">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i
                 ></a>
-                <form action="/index.html">
+                <form class="searchField" action="/index.html">
                     <label for="search" class="search-label">Search</label>
                     <input
                         type="search"
@@ -93,6 +99,10 @@
                     />
                     <button>Search</button>
                 </form>
+            </nav>
+
+            <div>
+
             </div>
         </header>
         <!--Header stops here-->
