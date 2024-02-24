@@ -17,12 +17,16 @@ async function getProducts() {
         const allProducts = products;
 
         allProducts.forEach(function (product) {
-            resultsContainer.innerHTML += `<div class="card">
-    <img src="${product.image}" alt="${product.description}" />
-    <h1>${product.title}</h1>
-    <p class="price" >Price: ${product.price}</p>
-    <a class="detailButton" href="product.html?id=${product.id}">View details</a>
-  </div>`;
+            resultsContainer.innerHTML += `
+    <a   href="product.html?id=${product.id}">
+      <div class="card">
+        <img src="${product.image}" alt="${product.description}" />
+        <h1>${product.title}</h1>
+        <p class="price">Price: ${product.price}</p>
+        <p class="detailButton">View details</p>
+      </div>
+    </a>
+  `;
         });
     } catch (error) {
         console.error("Error fetching products:", error);

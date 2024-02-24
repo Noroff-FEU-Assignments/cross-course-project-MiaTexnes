@@ -19,7 +19,7 @@ async function getProductsByGender(gender) {
         resultsContainer.classList.add("product-grid");
 
         filteredProducts.forEach(function (product) {
-            resultsContainer.innerHTML += `<div class="card">
+            resultsContainer.innerHTML += `
         <a   href="product.html?id=${product.id}">
       <div class="card">
         <img src="${product.image}" alt="${product.description}" />
