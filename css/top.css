@@ -37,7 +37,7 @@ header div {
 
 .navbar a {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 35px;
   color: #000000;
 }
 
@@ -51,6 +51,7 @@ nav i {
 }
 
 .searchField {
+  display: flex;
   background-color: #dfe8dd;
 }
 

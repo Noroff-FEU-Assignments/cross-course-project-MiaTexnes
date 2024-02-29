@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 20px 20px 0px 20px;
+    padding: 0px 0px 0px 0px;
 }
 
 .specific-product img {
@@ -65,8 +65,9 @@
   font-size: 1.7em;
   margin: 30px 2px 4px 2px;
   cursor: pointer;
-  border-radius: 10%;
+  border-radius: 1em;
   transition: box-shadow 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 .card:hover {
@@ -77,26 +78,32 @@
   display: flex;
   justify-content: space-evenly;
   width: 80%;
+  padding: 20px 20px 0px 20px;
 }
 
 .product-image {
   flex: 1;
   text-align: center;
-  width: 60%;
-  height: 60%;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .product-text {
-  flex: 2;
-  font-size: 180%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+.product-text p {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+
+}
+
 h2 {
   font-size: 1.5rem;
   padding: 1rem 0rem 1rem 0rem;
+  font-weight: normal;
 }
 
 .card:hover {

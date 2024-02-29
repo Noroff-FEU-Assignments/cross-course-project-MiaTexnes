@@ -73,8 +73,8 @@ main .lemonsjoen {
 .slogan-middle {
   font-style: italic;
   text-align: center;
-  font-size: 2.5em;
-  font-weight: 500;
+  font-size: 2.3em;
+  font-weight: 550;
   padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
@@ -94,7 +94,7 @@ main .lemonsjoen {
 .labbedal-picture,
 .about-picture,
 .cart-picture, .kids-picture {
-  max-width: 100%;
+  max-width: 80vw;
   padding: 20px 20px 40px 20px;
   height: auto;
   display: block;
@@ -146,10 +146,11 @@ main .lemonsjoen {
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  font-size: 1em;
-  padding: 0.3em 1em;
+  font-size: 1.2em;
+  padding: 0.5em 1.1em;
   border-radius: 1em;
   margin: 0.5em;
+  font-weight: bold;
 }
 
 .cta-confirm {
@@ -161,7 +162,7 @@ main .lemonsjoen {
 }
 
 .cta-confirm:hover {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: bold;
 }
 
@@ -254,6 +255,13 @@ main .lemonsjoen {
   gap: 50px;
 }
 
+.buttonsProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /*Start media queries*/
 @media screen and (max-width: 1200px) {
@@ -329,6 +337,11 @@ main .lemonsjoen {
 
   .checkout-page {
     display: block;
+  }
+  .cardSpecific{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
