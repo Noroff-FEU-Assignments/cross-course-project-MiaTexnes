@@ -40,6 +40,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script src="js/allPages.js" type="module"></script>
+        <script src="/js/product.js" defer></script>
         <!-- Hotjar Tracking Code for Rainy Days -->
         <script>
             (function (h, o, t, j, a, r) {
@@ -103,7 +104,14 @@
         <!--Header stops here-->
 
         <main>
-            <h1 class="headline-pages">Cart</h1>
+            <div id="cart-container"></div>
+            <aside>
+                <h1>My Cart</h1>
+                <ul id="cart-items"></ul>
+                <div class="products"></div>
+                <p>Total:<span id="cart-total"></span></p>
+            </aside>
+            <!-- <h1 class="headline-pages">Cart</h1>
             <div class="checkout-page">
                 <div class="in-cart">
                     <h2 class="in-cart-center">In my cart</h2>
@@ -124,8 +132,8 @@
                                 src="products/Labbedal.png"
                                 alt="Labbedal - Rain Overall"
                             />
-                        </a>
-                    </div>
+                        </a> -->
+                    <!-- </div>
                     <div class="product-total">
                         <h4>Product total</h4>
                         <p>316 $</p>
@@ -133,7 +141,7 @@
                         <p>10 $</p>
                         <h4>Total</h4>
                         <p class="price-total">326 $</p>
-                    </div>
+                    </div> -->
                 </div>
 
                 <form>

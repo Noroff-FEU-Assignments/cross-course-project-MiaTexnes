@@ -11,9 +11,9 @@
   width: 400px;
 }
 
-.contact-form > * {
+/* .contact-form > * {
   flex: 1;
-}
+} */
 
 .contact-page {
   display: flex;
@@ -23,6 +23,17 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+}
+
+.contact-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  margin-bottom: 0.2rem;
+
 }
 
 /*End contact page*/

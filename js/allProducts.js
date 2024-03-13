@@ -22,7 +22,7 @@ async function getProducts() {
       <div class="card">
         <img src="${product.image}" alt="${product.description}" />
         <h1>${product.title}</h1>
-        <p class="price">Price: ${product.price}</p>
+        <p class="price">Price $: ${product.price}</p>
         <p class="detailButton">View details</p>
       </div>
     </a>

@@ -262,6 +262,20 @@ main .lemonsjoen {
   justify-content: center;
 }
 
+/* .addToCart {
+  background-color: #dfe8dd;
+  border: none;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 30px 2px 4px 2px;
+  cursor: pointer;
+  border-radius: 1em;
+} */
+
 
 /*Start media queries*/
 @media screen and (max-width: 1200px) {
