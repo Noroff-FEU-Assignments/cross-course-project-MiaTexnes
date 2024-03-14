@@ -4,8 +4,11 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>RainyDays - Contact</title>
-        <meta name="description" content="Contact RainyDays" />
+        <title>RainyDays - Cart</title>
+        <meta
+            name="description"
+            content="RainyDays shopping cart - where you buy the best"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Roboto&display=swap"
             rel="stylesheet"
@@ -37,28 +40,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script src="js/allPages.js" type="module"></script>
+        <script src="/js/cart.js" type="module"></script>
         <!-- Hotjar Tracking Code for Rainy Days -->
         <!-- Hotjar Tracking Code for Rainy Days new -->
-        <script>
-            (function (h, o, t, j, a, r) {
-                h.hj =
-                    h.hj ||
-                    function () {
-                        (h.hj.q = h.hj.q || []).push(arguments);
-                    };
-                h._hjSettings = { hjid: 3906099, hjsv: 6 };
-                a = o.getElementsByTagName("head")[0];
-                r = o.createElement("script");
-                r.async = 1;
-                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(
-                window,
-                document,
-                "https://static.hotjar.com/c/hotjar-",
-                ".js?sv="
-            );
-        </script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3906099,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
     </head>
 
     <body>
@@ -82,7 +76,7 @@
                 <a href="women.html">Women</a>
                 <a href="all.html">All</a>
                 <a href="about.html">About</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html">Contact</a>
                 <a href="cart.html" class="cart-icon" title="shopping cart">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i
                 ></a>
@@ -100,55 +94,134 @@
         </header>
         <!--Header stops here-->
 
-        <main>
-            <h1 class="headline-pages">Contact Us</h1>
-            <section class="contact-page">
-                <form id="contact-form" class="contact-form">
-                    <label for="first-name">First Name:</label>
-                    <input
-                        type="text"
-                        id="first-name"
-                        name="first-name"
-                        required
-                    />
+         <main>
+      <h1 class="headline-pages">Cart</h1>
+      <div class="checkout-page">
+        <div class="in-cart">
+          <h2 class="in-cart-center">In my cart</h2>
+          <div class="in-cart-product-color">
+            <h3>Rainy Days</h3>
+            <p>Habita Jacket</p>
+            <p>Size 3</p>
+            <p>129.99 $</p>
 
-                    <label for="last-name">Last Name:</label>
-                    <input
-                        type="text"
-                        id="last-name"
-                        name="last-name"
-                        required
-                    />
+            <div class="quantity-buttons">
+              <button class="button-plus">+</button>
+              <button class="quantity-button-1">1</button>
+              <button class="button-minus">-</button>
+            </div>
+            <a href="index.html">
+              <img
+                class="labbedal-image"
+                src="images/products/RainyDays_Jacket4.png"
+                alt="Rainy Days - Habita Jacket"
+              />
+            </a>
+          </div>
+          <div class="product-total">
+            <h4>Product total</h4>
+            <p>129.99 $</p>
+            <h4>Delivery fee</h4>
+            <p>10 $</p>
+            <h4>Total</h4>
+            <p class="price-total">139.99 $</p>
+          </div>
+        </div>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
+        <form>
+          <fieldset>
+            <legend class="payment-info">Payment</legend>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+            <label for="card-name">Enter name of card holder id</label>
+            <input
+              type="text"
+              name="card-name"
+              class="payment-form"
+              placeholder="Enter here"
+              id="card-name"
+            />
+            <label for="card-number">Card number</label>
+            <input
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,9}"
+              name="card-number"
+              class="payment-form"
+              id="card-number"
+              placeholder="Fill in here"
+            />
+            <label for="expiration">Expiration date</label>
+            <input
+              type="tel"
+              name="expiration-date"
+              class="payment-form"
+              placeholder="Tap here to write"
+              id="expiration"
+            />
+            <label for="cvv">Cvv code</label>
+            <input
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,9}"
+              name="cvv-code"
+              id="cvv"
+              class="payment-form"
+              placeholder="Fill in here"
+            />
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend class="shipping-info">Shipping info</legend>
+            <label for="full-name">Full name</label>
+            <input
+              type="text"
+              name="full-name"
+              class="shipping-form"
+              placeholder="Enter here"
+              id="full-name"
+            />
+            <label for="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              class="shipping-form"
+              placeholder="Enter here"
+              id="address"
+            />
+            <label for="telephone">Telephone number</label>
+            <input
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s] {13,9}"
+              name="telephone"
+              class="shipping-form"
+              placeholder="Tap here to write"
+              id="telephone"
+            />
+            <p>
+              By clicking “Confirm Payment” I agree to company’s terms of
+              service
+            </p>
+            <div class="cta-checkout">
+              <a href="thankyou.html" class="cta-confirm">Confirm payment</a>
+              <a href="index.html" class="cta-shop">Continue shopping</a>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
 
-                    <input type="submit" value="Submit" />
-                </form>
-                <div class="contact-info">
-                    <h2>Address</h2>
-                    <p>Rain road <br />5000 Aarau <br />Switzwerland</p>
-                    <br />
-
-                    <h2>Email</h2>
-                    <a href="mailto:rainydays@rainy.com">rainydays@rainy.com</a>
-                    <h2>Phone</h2>
-                    <p>+48 35 71 59 25</p>
-                </div>
-            </section>
-        </main>
         <img
-            class="contact-picture"
-            src="images/contact-picture.png"
-            alt="Picture of two people walking towards a rainbow"
+            src="images/cart-picture.png"
+            alt="Picture of beatiful nature mirroring the forest in the water"
+            class="cart-picture"
         />
         <div>
             <h3 class="slogan-middle">
-                Bringing color to your family's outdoor adventures
+                Experience the blue sky like never before with our high-quality
+                outdoor clothing
             </h3>
+        </div>
         </div>
 
         <!--Footer starts here-->
@@ -160,7 +233,7 @@
                         <ul class="items">
                             <li><a href="men.html">Men</a></li>
                             <li><a href="women.html">Women</a></li>
-                            <li><a href="all.html">all</a></li>
+                            <li><a href="all.html">All</a></li>
                             <li><a href="index.html">Home</a></li>
                         </ul>
                     </div>

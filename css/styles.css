@@ -2,89 +2,90 @@
 @import "top.css";
 @import "contact.css";
 @import "footer.css";
+@import "cart.css";
 
 * {
-  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-repeat: no-repeat
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
 }
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /*Picture with text on the index*/
 main .lemonsjoen {
-  background-image: url("../images/Lemonsjoen-Mona-1.png");
-  height: 65vh;
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  background-position: center;
+    background-image: url("../images/Lemonsjoen-Mona-1.png");
+    height: 65vh;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
 }
 
 .lemonsjoen-text {
-  position: absolute;
-  text-align: center;
-  left: 20px;
-  bottom: 60px;
-  background: rgba(255, 255, 255, 0.2);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  padding: 5px;
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    bottom: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 /*Text image on index*/
 .bottom-left {
-  font-size: 50px;
-  color: black;
-  text-decoration: underline;
+    font-size: 50px;
+    color: black;
+    text-decoration: underline;
 }
 
 .bottom-left-under {
-  font-size: 36px;
-  color: black;
-  font-style: italic;
+    font-size: 36px;
+    color: black;
+    font-style: italic;
 }
 
 .trending {
-  font-size: 50px;
-  color: #000;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /*Product card/container*/
 
 .sizing-boxes {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  padding-top: 15px;
-  padding-bottom: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /*Used on multiple pages*/
 .slogan-middle {
-  font-style: italic;
-  text-align: center;
-  font-size: 2.3em;
-  font-weight: 550;
-  padding-bottom: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
+    font-style: italic;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 550;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .headline-pages {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 38px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 38px;
 }
 
 .women-picture,
@@ -93,371 +94,384 @@ main .lemonsjoen {
 .all-picture,
 .labbedal-picture,
 .about-picture,
-.cart-picture, .kids-picture, .sizeImage {
-  max-width: 80vw;
-  padding: 20px 20px 40px 20px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.cart-picture,
+.kids-picture,
+.sizeImage {
+    max-width: 80vw;
+    padding: 20px 20px 40px 20px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .thank-you {
-  max-width: 100%;
-  padding: 20px 20px 40px 20px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+    max-width: 100%;
+    padding: 20px 20px 40px 20px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .labbedal-card {
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 1rem;
-  background-color: #dfe8dd;
-  box-shadow: none;
-  text-align: center;
-  border-radius: 10%;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: #dfe8dd;
+    box-shadow: none;
+    text-align: center;
+    border-radius: 10%;
 }
 
 .about-picture {
-  border-radius: 10%;
+    border-radius: 10%;
 }
 
 /*Cart/checkout page*/
 .cart-picture {
-  width: 100%;
+    width: 100%;
 }
 
 .cta-checkout {
-  text-align: center;
+    text-align: center;
 }
 
 .payment-form {
-  display: block;
+    display: block;
 }
 
 .cta-confirm,
 .cta-shop {
-  color: #000;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.2em;
-  padding: 0.5em 1.1em;
-  border-radius: 1em;
-  margin: 0.5em;
-  font-weight: bold;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5em 1.1em;
+    border-radius: 1em;
+    margin: 0.5em;
+    font-weight: bold;
 }
 
 .cta-confirm {
-  background-color: #bfd4bc;
+    background-color: #bfd4bc;
 }
 .cta-confirm a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .cta-confirm:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .cta-shop {
-  background-color: #eee4b9;
+    background-color: #eee4b9;
 }
 
 .cta-shop:hover {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .checkout-page {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 30px;
-  justify-content: space-around;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 .in-cart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .in-cart-center {
-  text-align: center;
+    text-align: center;
 }
 
 .labbedal-image {
-  height: 150px;
-  background-color: #bfd4bc;
+    height: 150px;
+    background-color: #bfd4bc;
 }
 
 .in-cart-product-color {
-  width: 100%;
-  background-color: #bfd4bc;
-  display: flex;
-  gap: 30px;
+    width: 100%;
+    background-color: #bfd4bc;
+    display: flex;
+    gap: 30px;
 }
 
 .quantity-buttons {
-  display: block;
+    display: block;
 }
 
 .button-plus {
-  padding: 1px 1.4px 1px 1.4px;
+    padding: 1px 1.4px 1px 1.4px;
 }
 
 .button-minus {
-  padding: 1.3px 2.5px 1px 2.5px;
+    padding: 1.3px 2.5px 1px 2.5px;
 }
 
 .in-cart-product-color p {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .in-cart-product-color h3 {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 .product-total {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .shipping-form {
-  display: block;
+    display: block;
 }
 .payment-info,
 .shipping-info {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 /*End cart/checkout page*/
 
 .about-text {
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-  margin: 3px 20px 3px 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    margin: 3px 20px 3px 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .product-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .buttonsProduct {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-/* .addToCart {
-  background-color: #dfe8dd;
-  border: none;
-  color: black;
-  padding: 10px 20px 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.7em;
-  margin: 30px 2px 4px 2px;
-  cursor: pointer;
-  border-radius: 1em;
-} */
-
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
 
 /*Start media queries*/
 @media screen and (max-width: 1200px) {
-  header div {
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar a {
-    display: flex;
-    font-size: 28px;
-    gap: 89px;
-  }
-  nav {
-    padding-left: 15px;
-  }
-  header {
-    display: block;
-  }
-  header .logoheader {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
+    header div {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar a {
+        display: flex;
+        font-size: 28px;
+        gap: 89px;
+    }
+    nav {
+        padding-left: 15px;
+    }
+    header {
+        display: block;
+    }
+    header .logoheader {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 1045px) {
-  .sizing-boxes {
-    display: flex;
-    flex-direction: column;
-  }
-  .labbedal-card {
-    max-height: 550px;
-  }
+    .sizing-boxes {
+        display: flex;
+        flex-direction: column;
+    }
+    .labbedal-card {
+        max-height: 550px;
+    }
 }
 
 @media screen and (max-width: 824px) {
-  .navbar a {
-    font-size: 28px;
-  }
-  .socials {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .social-content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
+    .navbar a {
+        font-size: 28px;
+    }
+    .socials {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .social-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 770px) {
-  main .lemonsjoen {
-    height: 30vh;
-    width: 100%;
-  }
+    main .lemonsjoen {
+        height: 30vh;
+        width: 100%;
+    }
 
-  .lemonsjoen-text {
-    transform: translateY(0);
-    text-align: center;
-    padding-left: 0;
-    left: 0;
-  }
+    .lemonsjoen-text {
+        transform: translateY(0);
+        text-align: center;
+        padding-left: 0;
+        left: 0;
+    }
 
-  .bottom-left {
-    font-size: 30px;
-  }
+    .bottom-left {
+        font-size: 30px;
+    }
 
-  .bottom-left-under {
-    font-size: 20px;
-  }
+    .bottom-left-under {
+        font-size: 20px;
+    }
 
-  .checkout-page {
-    display: block;
-  }
-  .cardSpecific{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .checkout-page {
+        display: block;
+    }
+    .cardSpecific {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 630px) {
-  .navbar a {
-    font-size: 25px;
-  }
+    .navbar a {
+        font-size: 25px;
+    }
 
-  header .logoheader {
-    align-items: center;
-    margin-left: 0;
-    width: 70%;
-    height: 50%;
-  }
-  }
+    header .logoheader {
+        align-items: center;
+        margin-left: 0;
+        width: 70%;
+        height: 50%;
+    }
+}
 
 @media screen and (max-width: 500px) {
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
-  .contact-page {
-    display: flex;
-    flex-direction: column;
-  }
+    .contact-page {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .in-cart-product-color {
-    width: 100%;
-    background-color: #bfd4bc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
+    .in-cart-product-color {
+        width: 100%;
+        background-color: #bfd4bc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 
-  form p {
-    text-align: center;
-  }
+    form p {
+        text-align: center;
+    }
 }
 
-@media  screen and (max-width: 1200px) {
-.header {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-  .navbar {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: none;
-  z-index: 1;
-  padding: 0;
-  margin: 0;
-}
+@media screen and (max-width: 1200px) {
+    .header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: none;
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+    }
 
-.navbar a {
-  display: block;
-  padding: 25px 15px;
-  text-decoration: none;
-  text-align: center;
-  background-color: #dfe8dd;
-  color: black;
-  font-weight: bold;
-}
+    .navbar a {
+        display: block;
+        padding: 25px 15px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #dfe8dd;
+        color: black;
+        font-weight: bold;
+    }
 
-.navbar a.active {
-  text-decoration: underline;
-  -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-  -moz-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-  -o-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-  -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-}
+    .navbar a.active {
+        text-decoration: underline;
+        -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -moz-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -o-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    }
 
-.hamburger-menu {
-  position: absolute;
-  top: 8%;
-  right: 8%;
-  font-size: 3rem;
-  z-index: 10;
-  padding-left: 10px;
-}
+    .hamburger-menu {
+        position: absolute;
+        top: 8%;
+        right: 8%;
+        font-size: 3rem;
+        z-index: 10;
+        padding-left: 10px;
+    }
 
-.hamburger-menu-close {
-  position: absolute;
-  top: 8%;
-  right: 8%;
-  font-size: 3rem;
-  display: none;
-  z-index: 10;
-  padding-left: 10px;
-}
+    .hamburger-menu-close {
+        position: absolute;
+        top: 8%;
+        right: 8%;
+        font-size: 3rem;
+        display: none;
+        z-index: 10;
+        padding-left: 10px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-  #open, #close {
-  display: none;
-}
+    #open,
+    #close {
+        display: none;
+    }
 }

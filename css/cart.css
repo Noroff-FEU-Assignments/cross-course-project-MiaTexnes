@@ -1,0 +1,113 @@
+/*Cart/checkout page*/
+.cart-picture {
+    width: 100%;
+}
+
+.cta-checkout {
+    text-align: center;
+}
+
+.payment-form {
+    display: block;
+}
+
+.cta-confirm,
+.cta-shop {
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5em 1.1em;
+    border-radius: 1em;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+.cta-confirm {
+    background-color: #bfd4bc;
+}
+.cta-confirm a {
+    text-decoration: none;
+    color: black;
+}
+
+.cta-confirm:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.cta-shop {
+    background-color: #eee4b9;
+}
+
+.cta-shop:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.checkout-page {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.in-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.in-cart-center {
+    text-align: center;
+}
+
+.labbedal-image {
+    height: 150px;
+    background-color: #bfd4bc;
+}
+
+.in-cart-product-color {
+    width: 100%;
+    background-color: #bfd4bc;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.quantity-buttons {
+    display: block;
+}
+
+.button-plus {
+    padding: 1px 1.4px 1px 1.4px;
+}
+
+.button-minus {
+    padding: 1.3px 2.5px 1px 2.5px;
+}
+
+.in-cart-product-color p {
+    font-size: 0.5rem;
+}
+
+.in-cart-product-color h3 {
+    font-size: 22px;
+}
+
+.product-total {
+    text-decoration: underline;
+}
+
+.shipping-form {
+    display: block;
+}
+.payment-info,
+.shipping-info {
+    text-decoration: underline;
+}
+/*End cart/checkout page*/
