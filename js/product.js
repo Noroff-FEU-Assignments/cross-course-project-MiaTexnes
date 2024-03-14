@@ -117,10 +117,6 @@ async function getProduct() {
       <p>Gender: ${product.gender}</p>
       <p>Color: ${product.baseColor}</p>
       <p>Size: ${sizeOptions}</p>
-      <button class="cta-confirm" onclick="addToCart(${JSON.stringify(product)
-          .split('"')
-          .join("&quot;")})">Add to Cart</button>
-    </div>
     </div>`;
     } catch (error) {
         const resultsContainer = document.querySelector("#container-product");
