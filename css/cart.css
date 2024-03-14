@@ -17,7 +17,7 @@
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.5rem;
     padding: 0.5em 1.1em;
     border-radius: 1em;
     margin: 0.5em;
@@ -109,5 +109,12 @@
 .payment-info,
 .shipping-info {
     text-decoration: underline;
+}
+
+.price-total {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
 }
 /*End cart/checkout page*/
