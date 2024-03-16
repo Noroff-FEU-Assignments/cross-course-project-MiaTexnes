@@ -61,7 +61,7 @@ nav i {
 
 nav a:hover {
   color: #000000;
-  font-weight: bold;
+  /* font-weight: bold; */ /*testing without bold */
   text-decoration: underline;
 }
 

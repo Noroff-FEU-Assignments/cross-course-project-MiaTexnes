@@ -11,10 +11,6 @@
   width: 400px;
 }
 
-/* .contact-form > * {
-  flex: 1;
-} */
-
 .contact-page {
   display: flex;
   justify-content: center;
