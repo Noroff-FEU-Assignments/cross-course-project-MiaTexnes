@@ -1,4 +1,3 @@
-
 var favicons = [
     {
         rel: "apple-touch-icon",
@@ -50,6 +49,3 @@ if (openIcon && closeIcon) {
         openIcon.style.display = "block";
     });
 }
-
-
-

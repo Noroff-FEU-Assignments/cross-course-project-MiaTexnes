@@ -1,81 +1,80 @@
 /* Header section */
 header {
-  color: black;
-  width: 100%;
-  /* outline: 2px solid #bcbcbc; */
-  outline-offset: 0px;
-  display: flex;
-  /* border-bottom: 2px solid #bcbcbc; */
-  background-color: #dfe8dd;
+    color: black;
+    width: 100%;
+    /* outline: 2px solid #bcbcbc; */
+    outline-offset: 0px;
+    display: flex;
+    /* border-bottom: 2px solid #bcbcbc; */
+    background-color: #dfe8dd;
 }
 
 .navbar {
-  padding-bottom: 20px;
-  padding-left: 5%;
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  justify-content: space-evenly;
-  gap: 30px;
-  margin-right: 15px;
-  margin-left: 15px;
-
+    padding-bottom: 20px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 header > * {
-  flex: 0.2;
+    flex: 0.2;
 }
 
 header div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 5px;
-  padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    padding-left: 15px;
 }
 
 .navbar a {
-  text-decoration: none;
-  font-size: 35px;
-  color: #000000;
+    text-decoration: none;
+    font-size: 35px;
+    color: #000000;
 }
 
 nav i {
-  transform: scale(1);
-  padding: 2px;
+    transform: scale(1);
+    padding: 2px;
 }
 
 .search-label {
-  display: none;
+    display: none;
 }
 
 .searchField {
-  display: flex;
-  background-color: #dfe8dd;
+    display: flex;
+    background-color: #dfe8dd;
 }
 
 #search {
-  width: 110px;
+    width: 110px;
 }
 
 nav a:hover {
-  color: #000000;
-  /* font-weight: bold; */ /*testing without bold */
-  text-decoration: underline;
+    color: #000000;
+    /* font-weight: bold; */ /*testing without bold */
+    text-decoration: underline;
 }
 
 .navbar .active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .logoheader {
-  padding: 10px;
-  position: static;
+    padding: 10px;
+    position: static;
 }
 
 nav i {
-  color: black;
+    color: black;
 }
 
 /* End header */

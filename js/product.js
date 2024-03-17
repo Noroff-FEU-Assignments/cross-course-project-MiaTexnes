@@ -56,7 +56,6 @@
 
 // getProduct();
 
-
 import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
 import { url } from "./constants.js";
 
@@ -107,9 +106,7 @@ async function getProduct() {
         }
 
         resultsContainer.innerHTML = `<div class="cardSpecific">
-    <img class="product-image" src="${product.image}" alt="${
-            product.description
-        }" />
+    <img class="product-image" src="${product.image}" alt="${product.description}" />
     <div class="product-text">
       <h1>${product.title}</h1>
       <p>Price $: ${product.price}</p>
