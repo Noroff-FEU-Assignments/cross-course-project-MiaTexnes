@@ -98,7 +98,9 @@ async function getProduct() {
         if (product.sizes && product.sizes.length) {
             sizeOptions = `<select id="product-sizes" name="sizes">`;
             for (const size of product.sizes) {
-                sizeOptions += `<option value="${size}">${size}</option>`;
+                if (["S", "M", "L"].includes(size)) {
+                    sizeOptions += `<option value="${size}">${size}</option>`;
+                }
             }
             sizeOptions += `</select>`;
         } else {
