@@ -1,5 +1,5 @@
 const url =
-    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/v3/products"; // Replace with your domain
+    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/store/products/"; // Replace with your domain
 const consumerKey = "ck_72a9ee68ddfc8e8b75af76f8665f066eef1468fb";
 const consumerSecret = "cs_044d1da18354755a282314535eab6e3c2c5f0e1c";
 
@@ -17,6 +17,14 @@ fetch(url, {
     })
     .then((products) => {
         console.log(products); // Log products here
+
+        if (!Array.isArray(products)) {
+            console.error(
+                "Expected products to be an array, got",
+                typeof products
+            );
+            return;
+        }
 
         const resultsContainer = document.querySelector("#container-product");
         resultsContainer.innerHTML = "";
