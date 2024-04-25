@@ -1,5 +1,5 @@
 const url =
-    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/v3/"; // Replace with your domain
+    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/v3/products"; // Replace with your domain
 const consumerKey = "ck_72a9ee68ddfc8e8b75af76f8665f066eef1468fb";
 const consumerSecret = "cs_044d1da18354755a282314535eab6e3c2c5f0e1c";
 
@@ -16,17 +16,19 @@ fetch(url, {
         return response.json();
     })
     .then((products) => {
+        console.log(products); // Log products here
+
         const resultsContainer = document.querySelector("#container-product");
         resultsContainer.innerHTML = "";
         resultsContainer.classList.add("product-grid");
 
-        const firstThreeProducts = products;
+        const firstThreeProducts = products.slice(0, 3); // Use slice to get an array
 
         firstThreeProducts.forEach(function (product) {
             resultsContainer.innerHTML += `
     <a href="product.html?id=${product.id}">
       <div class="card">
-        <img src="${product.image.src}" alt="${product.description}" />
+        <img src="${product.images[0].src}" alt="${product.description}" />
         <h1>${product.name}</h1>
         <p class="price">Price $: ${product.price}</p>
       </div>
