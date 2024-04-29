@@ -1,13 +1,8 @@
 const url =
-    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/store/products/"; // Replace with your domain
-const consumerKey = "ck_72a9ee68ddfc8e8b75af76f8665f066eef1468fb";
-const consumerSecret = "cs_044d1da18354755a282314535eab6e3c2c5f0e1c";
+    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/store/products/";
 
 fetch(url, {
     method: "GET",
-    headers: {
-        Authorization: `Basic ${btoa(`${consumerKey}:${consumerSecret}`)}`,
-    },
 })
     .then((response) => {
         if (response.ok !== true) {
