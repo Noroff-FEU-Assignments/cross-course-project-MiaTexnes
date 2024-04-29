@@ -1,6 +1,9 @@
 const url =
     "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/store/products/";
 
+const resultsContainer = document.querySelector("#container-product");
+const errorContainer = document.querySelector("#container-product"); // Select the error container
+
 fetch(url, {
     method: "GET",
 })
@@ -21,7 +24,6 @@ fetch(url, {
             return;
         }
 
-        const resultsContainer = document.querySelector("#container-product");
         resultsContainer.innerHTML = "";
         resultsContainer.classList.add("product-grid");
 
@@ -45,6 +47,7 @@ fetch(url, {
     .catch((error) => {
         // Handle any errors
         console.error("Error:", error);
+        errorContainer.innerHTML = `<p>Error: ${error.message}</p>`; // Display the error message in the HTML
     });
 
 // import { url } from './constants.js'
