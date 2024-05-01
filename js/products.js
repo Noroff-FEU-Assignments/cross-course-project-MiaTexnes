@@ -50,9 +50,9 @@ async function getProductsByGender(gender) {
 function handlePageChange() {
     const pathname = window.location.pathname;
     console.log(pathname);
-    if (pathname === "/women.html") {
+    if (pathname === "/women") {
         getProductsByGender("Female");
-    } else if (pathname === "/men.html") {
+    } else if (pathname === "/men") {
         getProductsByGender("Male");
     }
 }
