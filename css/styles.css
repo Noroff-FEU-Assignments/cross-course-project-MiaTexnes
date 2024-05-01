@@ -132,6 +132,8 @@ main .lemonsjoen {
     justify-content: center;
 }
 
+
+
 @media (max-width: 800px) {
     .shopping-cart {
         width: 100%;

@@ -52,10 +52,23 @@ nav i {
 .searchField {
     display: flex;
     background-color: #dfe8dd;
+    input {
+        padding-left: 1rem;
+        border: 1px rgba(0, 0, 0, 0.105) solid;
+        border-top-left-radius: 3px;
+        border-right: none;
+        background-color: #3e1b3a1c;
+    }
+    button{
+        padding: 1rem;
+        border: 1px rgba(0, 0, 0, 0.105) solid;
+        border-top-right-radius: 3px;
+        background-color: #1daa281c;
+    }
 }
 
 #search {
-    width: 110px;
+    width: 120px;
 }
 
 nav a:hover {

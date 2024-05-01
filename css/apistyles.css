@@ -107,6 +107,26 @@ h2 {
     box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
+#thumbnail {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
 @media screen and (max-width: 1200px) {
     .product-grid {
         display: grid;

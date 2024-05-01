@@ -1,5 +1,5 @@
-const url =
-    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wc/store/products/";
+import { url } from "./constants.js";
+import { formattedPrice } from "./helpers/formattedPrice.js";
 
 const resultsContainer = document.querySelector("#container-product");
 const errorContainer = document.querySelector("#container-product"); // Select the error container
@@ -30,16 +30,13 @@ fetch(url, {
         const firstThreeProducts = products.slice(0, 3); // Use slice to get an array
 
         firstThreeProducts.forEach(function (product) {
-            const price = Number(
-                (Number(product.prices.price) * 10).toFixed(2)
-            );
-            const formattedPrice = price.toLocaleString("en-US");
+            const price = formattedPrice(product.prices.price);
             resultsContainer.innerHTML += `
 <a href="product.html?id=${product.id}">
   <div class="card">
     <img src="${product.images[0].src}" alt="${product.description}" />
     <h1>${product.name}</h1>
-    <p class="price">Price $: ${formattedPrice}</p>
+    <p class="price">Price $: ${price}</p>
   </div>
 </a>`;
         });
