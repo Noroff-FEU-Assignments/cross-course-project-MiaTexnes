@@ -1,34 +1,34 @@
-import { url } from "./constants.js";
-import { formattedPrice } from "./helpers/formattedPrice.js";
+import { url } from './constants.js'
+import { formattedPrice } from './helpers/formattedPrice.js'
 
-const resultsContainer = document.querySelector("#container-product");
+const resultsContainer = document.querySelector('#container-product')
 
-async function getProductsByGender(gender) {
-    try {
-        const response = await fetch(url);
+async function getProductsByGender (gender) {
+  try {
+    const response = await fetch(url)
 
-        if (!response.ok) {
-            throw new Error(`HTTP Error! status: ${response.status}`);
-        }
+    if (!response.ok) {
+      throw new Error(`HTTP Error! status: ${response.status}`)
+    }
 
-        const products = await response.json();
+    const products = await response.json()
 
-        const filteredProducts = products.filter((product) =>
-            product.attributes.some(
-                (attribute) =>
-                    attribute.name === "Gender" &&
+    const filteredProducts = products.filter((product) =>
+      product.attributes.some(
+        (attribute) =>
+          attribute.name === 'Gender' &&
                     attribute.terms.some(
-                        (term) =>
-                            term.name.toLowerCase() === gender.toLowerCase()
+                      (term) =>
+                        term.name.toLowerCase() === gender.toLowerCase()
                     )
-            )
-        );
+      )
+    )
 
-        resultsContainer.innerHTML = "";
-        resultsContainer.classList.add("product-grid");
-        filteredProducts.forEach(function (product) {
-            const price = formattedPrice(product.prices.price);
-            resultsContainer.innerHTML += `
+    resultsContainer.innerHTML = ''
+    resultsContainer.classList.add('product-grid')
+    filteredProducts.forEach(function (product) {
+      const price = formattedPrice(product.prices.price)
+      resultsContainer.innerHTML += `
         <a href="product.html?id=${product.id}">
           <div class="card">
             <img src="${product.images[0].src}" alt="${product.description}" />
@@ -37,28 +37,28 @@ async function getProductsByGender(gender) {
             <p class="detailButton">View details</p>
           </div>
         </a>
-      `;
-        });
-    } catch (error) {
-        console.error("Error fetching products:", error);
+      `
+    })
+  } catch (error) {
+    console.error('Error fetching products:', error)
 
-        resultsContainer.innerHTML =
-            "<p>Failed to load products. Please try again later.</p>";
-    }
+    resultsContainer.innerHTML =
+            '<p>Failed to load products. Please try again later.</p>'
+  }
 }
 
-function handlePageChange() {
-    const pathname = window.location.pathname;
-    console.log(pathname);
-    if (pathname === "/women") {
-        getProductsByGender("Female");
-    } else if (pathname === "/men") {
-        getProductsByGender("Male");
-    }
+function handlePageChange () {
+  const pathname = window.location.pathname
+  console.log(pathname)
+  if (pathname === '/women') {
+    getProductsByGender('Female')
+  } else if (pathname === '/men') {
+    getProductsByGender('Male')
+  }
 }
 
 // Call handlePageChange on page load
-handlePageChange();
+handlePageChange()
 
 // async function getProducts(tags, containerId) {
 //   try {
