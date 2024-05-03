@@ -35,7 +35,7 @@ function displayProduct(product) {
 }
 
 function displayError(error) {
-    const resultsContainer = document.querySelector("#container-product");
+    const resultsContainer = document.querySelector("#error-container");
     resultsContainer.innerHTML = `<p class="error">Error: ${error.message}</p>`;
 }
 

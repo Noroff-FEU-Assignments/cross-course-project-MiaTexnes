@@ -13,36 +13,46 @@ async function fetchProducts() {
             throw new Error(`HTTP Error! status: ${response.status}`);
         }
 
-        return response.json();
+        return await response.json();
     } catch (error) {
-        throw error; // Re-throwing the error to be caught by the calling function
+        // Handle fetch errors
+        displayError(error.message);
+        throw error; // It's still a good idea to re-throw the error after handling it
     }
 }
 
 function displayProducts(products) {
-    resultsContainer.classList.add("product-grid");
+    if (resultsContainer) {
+        resultsContainer.classList.add("product-grid");
 
-    const productCards = products
-        .map((product) => {
-            const price = formattedPrice(product.prices.price);
-            return `
-            <a href="product.html?id=${product.id}">
-                <div class="card">
-                    <img src="${product.images[0].src}" alt="${product.description}" />
-                    <h1>${product.name}</h1>
-                    <p class="price">Price $: ${price}</p>
-                    <p class="detailButton">View details</p>
-                </div>
-            </a>`;
-        })
-        .join("");
+        const productCards = products
+            .map((product) => {
+                const price = formattedPrice(product.prices.price);
+                return `
+                <a href="product.html?id=${product.id}">
+                    <div class="card">
+                        <img src="${product.images[0].src}" alt="${product.description}" />
+                        <h1>${product.name}</h1>
+                        <p class="price">Price $: ${price}</p>
+                        <p class="detailButton">View details</p>
+                    </div>
+                </a>`;
+            })
+            .join("");
 
-    resultsContainer.innerHTML = productCards;
+        resultsContainer.innerHTML = productCards;
+    } else {
+        console.error("Error: resultsContainer not found in the DOM.");
+    }
 }
 
 function displayError(message) {
     console.error("Error:", message); // Log the error message
-    errorContainer.innerHTML = `<p>Error: ${message}</p>`; // Display the error message in the HTML
+    if (errorContainer) {
+        errorContainer.innerHTML = `<p>Error: ${message}</p>`; // Display the error message in the HTML
+    } else {
+        console.error("Error: errorContainer not found in the DOM.");
+    }
 }
 
 async function init() {
@@ -50,13 +60,19 @@ async function init() {
         const products = await fetchProducts();
 
         if (!Array.isArray(products)) {
-            displayError("Expected products to be an array.");
-            return;
+            throw new Error("Expected products to be an array.");
         }
 
         displayProducts(products);
-        thumbnails(products, "#thumbnails"); // Assuming thumbnails is a function that needs to be called here
+
+        try {
+            thumbnails(products, "#thumbnails"); // Assuming thumbnails is a function that needs to be called here
+        } catch (thumbnailError) {
+            console.error("Thumbnail error:", thumbnailError.message);
+        }
     } catch (error) {
+        // Since displayError is called within fetchProducts, this catch block might be redundant
+        // unless there are other possible errors that can occur in the try block above
         displayError(error.message);
     }
 }

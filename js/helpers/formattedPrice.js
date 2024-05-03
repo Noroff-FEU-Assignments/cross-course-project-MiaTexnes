@@ -5,5 +5,3 @@ export function formattedPrice(price) {
     });
 }
 
-// Example usage:
-let formatted = formattedPrice(17999); // "179,99"

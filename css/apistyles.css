@@ -114,6 +114,7 @@ h2 {
     justify-content: center;
 }
 
+/* Define the spin animation */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -123,8 +124,18 @@ h2 {
     }
 }
 
+/* Apply the spin animation and mix-blend-mode to an element */
 .spin {
-    animation: spin 2s linear infinite;
+    animation: spin 5s linear infinite; /* Adjust the timing to your needs */
+    mix-blend-mode:multiply; /* Apply mix-blend-mode to the element */
+}
+
+#error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: red;
 }
 
 @media screen and (max-width: 1200px) {
