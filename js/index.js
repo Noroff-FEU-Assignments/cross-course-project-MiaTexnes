@@ -1,88 +1,97 @@
-import { url } from './constants.js'
-import { formattedPrice } from './helpers/formattedPrice.js'
+import { url } from "./constants.js";
+import { formattedPrice } from "./helpers/formattedPrice.js";
 
-const resultsContainer = document.querySelector('#container-product')
-const errorContainer = document.querySelector('#container-product') // Select the error container
+const resultsContainer = document.querySelector("#container-product");
+const errorContainer = document.querySelector("#error-container"); // Ensure this is the correct selector
 
-fetch(url, {
-  method: 'GET'
-})
-  .then((response) => {
-    if (response.ok !== true) {
-      throw new Error(`HTTP Error! status: ${response.status}`)
+function handleErrors(response) {
+    if (!response.ok) {
+        throw new Error(`HTTP Error! status: ${response.status}`);
     }
-    return response.json()
-  })
-  .then((products) => {
-    console.log(products) // Log products here
+    return response.json();
+}
 
+function displayProducts(products) {
     if (!Array.isArray(products)) {
-      console.error(
-        'Expected products to be an array, got',
-        typeof products
-      )
-      return
+        throw new Error("Expected products to be an array.");
     }
 
-    resultsContainer.innerHTML = ''
-    resultsContainer.classList.add('product-grid')
+    const MAX_PRODUCTS_DISPLAY = 3;
+    const productHTML = products
+        .slice(0, MAX_PRODUCTS_DISPLAY)
+        .map((product) => {
+            const price = formattedPrice(product.prices.price);
+            return `
+      <a href="product.html?id=${product.id}">
+        <div class="card">
+          <img src="${product.images[0].src}" alt="${product.description}" />
+          <h1>${product.name}</h1>
+          <p class="price">Price $: ${price}</p>
+          <p class="detailButton">View details</p>
+        </div>
+      </a>`;
+        })
+        .join("");
 
-    const firstThreeProducts = products.slice(0, 3) // Use slice to get an array
+    resultsContainer.innerHTML = productHTML;
+    resultsContainer.classList.add("product-grid");
+}
 
-    firstThreeProducts.forEach(function (product) {
-      const price = formattedPrice(product.prices.price)
-      resultsContainer.innerHTML += `
-<a href="product.html?id=${product.id}">
-  <div class="card">
-    <img src="${product.images[0].src}" alt="${product.description}" />
-    <h1>${product.name}</h1>
-    <p class="price">Price $: ${price}</p>
-  </div>
-</a>`
-    })
-  })
-  .catch((error) => {
-    // Handle any errors
-    console.error('Error:', error)
-    errorContainer.innerHTML = `<p>Error: ${error.message}</p>` // Display the error message in the HTML
-  })
+function displayError(error) {
+    console.error("Error:", error);
+    errorContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+}
+
+fetch(url, { method: "GET" })
+    .then(handleErrors)
+    .then(displayProducts)
+    .catch(displayError);
 
 // import { url } from './constants.js'
+// import { formattedPrice } from './helpers/formattedPrice.js'
 
-// async function getProducts () {
-//   try {
-//     const response = await fetch(url)
+// const resultsContainer = document.querySelector('#container-product')
+// const errorContainer = document.querySelector('#container-product') // Select the error container
 
+// fetch(url, {
+//   method: 'GET'
+// })
+//   .then((response) => {
 //     if (response.ok !== true) {
 //       throw new Error(`HTTP Error! status: ${response.status}`)
 //     }
+//     return response.json()
+//   })
+//   .then((products) => {
+//     console.log(products) // Log products here
 
-//     const products = await response.json()
+//     if (!Array.isArray(products)) {
+//       console.error(
+//         'Expected products to be an array, got',
+//         typeof products
+//       )
+//       return
+//     }
 
-//     const resultsContainer = document.querySelector('#container-product')
 //     resultsContainer.innerHTML = ''
 //     resultsContainer.classList.add('product-grid')
 
-//     const firstThreeProducts = products.slice(0, 3)
+//     const firstThreeProducts = products.slice(0, 3) // Use slice to get an array
 
 //     firstThreeProducts.forEach(function (product) {
+//       const price = formattedPrice(product.prices.price)
 //       resultsContainer.innerHTML += `
-//     <a   href="product.html?id=${product.id}">
-//       <div class="card">
-//         <img src="${product.image}" alt="${product.description}" />
-//         <h1>${product.title}</h1>
-//         <p class="price">Price $: ${product.price}</p>
-//         <p class="detailButton">View details</p>
-//       </div>
-//     </a>
-//   `
+// <a href="product.html?id=${product.id}">
+//   <div class="card">
+//     <img src="${product.images[0].src}" alt="${product.description}" />
+//     <h1>${product.name}</h1>
+//     <p class="price">Price $: ${price}</p>
+//   </div>
+// </a>`
 //     })
-//   } catch (error) {
-//     console.error('Error fetching products:', error)
-
-//     const resultsContainer = document.querySelector('#container')
-//     resultsContainer.innerHTML = '<p>Failed to load products. Please try again later.</p>'
-//   }
-// }
-
-// getProducts()
+//   })
+//   .catch((error) => {
+//     // Handle any errors
+//     console.error('Error:', error)
+//     errorContainer.innerHTML = `<p>Error: ${error.message}</p>` // Display the error message in the HTML
+//   })

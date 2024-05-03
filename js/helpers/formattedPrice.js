@@ -1,3 +1,9 @@
-export function formattedPrice (price) {
-  return Number((Number(price) * 10).toFixed(2)).toLocaleString('en-US')
+export function formattedPrice(price) {
+    return (price / 100).toLocaleString("de-DE", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
 }
+
+// Example usage:
+let formatted = formattedPrice(17999); // "179,99"
