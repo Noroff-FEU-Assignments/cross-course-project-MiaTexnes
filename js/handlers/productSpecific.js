@@ -1,6 +1,6 @@
-import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
-import { url } from "./constants.js";
-import { formattedPrice } from "./helpers/formattedPrice.js";
+import { getQueryStringParam } from "../helpers/getQueryStringParam.js";
+import { url } from "../constants.js";
+import { formattedPrice } from "../helpers/formattedPrice.js";
 
 async function fetchProductById(id) {
     const productUrl = `${url}${id}`;

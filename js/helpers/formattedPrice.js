@@ -4,4 +4,3 @@ export function formattedPrice(price) {
         maximumFractionDigits: 2,
     });
 }
-

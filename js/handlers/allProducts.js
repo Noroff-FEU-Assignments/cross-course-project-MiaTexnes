@@ -1,6 +1,6 @@
-import { url } from "./constants.js";
-import { thumbnails } from "./ui/thumbnails.js";
-import { formattedPrice } from "./helpers/formattedPrice.js";
+import { url } from "../constants.js";
+import { thumbnails } from "../ui/thumbnails.js";
+import { formattedPrice } from "../helpers/formattedPrice.js";
 
 const resultsContainer = document.querySelector("#container-product");
 const errorContainer = document.querySelector("#error-container"); // Ensure this is the correct selector

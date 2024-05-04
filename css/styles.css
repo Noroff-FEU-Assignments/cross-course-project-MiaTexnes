@@ -133,21 +133,19 @@ main .lemonsjoen {
 }
 
 .detailButton {
-  background-color: #dfe8dd;
-  border: none;
-  color: black;
-  padding: 10px 20px 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.7em;
-  margin: 30px 2px 4px 2px;
-  cursor: pointer;
-  border-radius: 10%;
-  transition: box-shadow 0.3s ease-in-out;
+    background-color: #dfe8dd;
+    border: none;
+    color: black;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 30px 2px 4px 2px;
+    cursor: pointer;
+    border-radius: 10%;
+    transition: box-shadow 0.3s ease-in-out;
 }
-
-
 
 @media (max-width: 800px) {
     .shopping-cart {

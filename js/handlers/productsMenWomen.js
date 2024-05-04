@@ -1,5 +1,5 @@
-import { url } from "./constants.js";
-import { formattedPrice } from "./helpers/formattedPrice.js";
+import { url } from "../constants.js";
+import { formattedPrice } from "../helpers/formattedPrice.js";
 
 const resultsContainer = document.querySelector("#container-product");
 
