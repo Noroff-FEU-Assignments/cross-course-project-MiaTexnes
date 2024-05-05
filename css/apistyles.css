@@ -74,9 +74,9 @@
 
 .cardSpecific {
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
-    padding: 20px 20px 0px 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%;
 }
 
 .product-image {
