@@ -1,16 +1,25 @@
+// Your existing imports
 import { url } from "../constants.js";
 import { formattedPrice } from "../helpers/formattedPrice.js";
+import {
+    showLoadingIndicator,
+    hideLoadingIndicator,
+    showErrorIndicator,
+} from "./errorAndLoading.js";
 
 const resultsContainer = document.querySelector("#container-product");
 
 async function fetchProducts() {
+    showLoadingIndicator(); // Show the loading indicator
     const response = await fetch(url);
 
     if (!response.ok) {
         throw new Error(`HTTP Error! status: ${response.status}`);
     }
 
-    return response.json();
+    const products = await response.json();
+    hideLoadingIndicator(); // Hide the loading indicator
+    return products;
 }
 
 function filterProductsByGender(products, gender) {
@@ -50,8 +59,7 @@ async function displayProducts(gender) {
             .join("");
     } catch (error) {
         console.error("Error fetching products:", error);
-        resultsContainer.innerHTML =
-            "<p>Failed to load products. Please try again later.</p>";
+        showErrorIndicator(error.message); // Display the error message
     }
 }
 

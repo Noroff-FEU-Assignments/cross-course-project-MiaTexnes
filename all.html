@@ -83,9 +83,15 @@
         <main>
             <h1 class="headline-pages">All products</h1>
 
-            <div id="container-product">Loading...</div>
+            <div id="container-product" class="container-product"></div>
+            <div id="loadingIndicator" class="indicator">
+                Loading
+            </div>
+
+            <div id="errorIndicator" class="indicator" style="display: none">
+                An error has occurred. Please try again.
+            </div>
             <div id="thumbnails"></div>
-            <div id="error-container"></div>
         </main>
         <img
             src="images/kids-picture.png"

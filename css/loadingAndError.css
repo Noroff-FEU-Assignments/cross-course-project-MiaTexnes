@@ -1,0 +1,51 @@
+.indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    z-index: 1000;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* Loading Indicator Styles */
+#loadingIndicator::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-top: 3px solid rgb(0, 255, 81);
+    border-right: 3px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* Error Indicator Styles */
+#errorIndicator {
+    color: red;
+}
+
+#errorIndicator::after {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-top: 3px solid rgb(0, 255, 81);
+    border-right: 3px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

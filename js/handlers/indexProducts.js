@@ -1,33 +1,40 @@
+// Your existing imports
 import { url } from "../constants.js";
 import { formattedPrice } from "../helpers/formattedPrice.js";
+import {
+    showLoadingIndicator,
+    hideLoadingIndicator,
+    showErrorIndicator,
+} from "./errorAndLoading.js";
 
+// Select the container
 const resultsContainer = document.querySelector("#container-product");
-const errorContainer = document.querySelector("#container-product"); // Select the error container
 
+// Start by showing the loading indicator
+showLoadingIndicator();
+
+// Fetch products
 fetch(url, {
     method: "GET",
 })
     .then((response) => {
-        if (response.ok !== true) {
+        if (!response.ok) {
             throw new Error(`HTTP Error! status: ${response.status}`);
         }
         return response.json();
     })
     .then((products) => {
-        console.log(products); // Log products here
-
         if (!Array.isArray(products)) {
-            console.error(
-                "Expected products to be an array, got",
-                typeof products
-            );
-            return;
+            throw new Error("Expected products to be an array.");
         }
 
-        resultsContainer.innerHTML = "";
+        hideLoadingIndicator(); // Hide loading indicator when data is received
+        resultsContainer.style.display = ""; // Show the results container
+
+        resultsContainer.innerHTML = ""; // Clear previous results
         resultsContainer.classList.add("product-grid");
 
-        const firstThreeProducts = products.slice(0, 3); // Use slice to get an array
+        const firstThreeProducts = products.slice(0, 3); // Use slice to get the first three products
 
         firstThreeProducts.forEach(function (product) {
             const price = formattedPrice(product.prices.price);
@@ -42,7 +49,6 @@ fetch(url, {
         });
     })
     .catch((error) => {
-        // Handle any errors
         console.error("Error:", error);
-        errorContainer.innerHTML = `<p>Error: ${error.message}</p>`; // Display the error message in the HTML
+        showErrorIndicator(error.message); // Show the error indicator with the error message
     });

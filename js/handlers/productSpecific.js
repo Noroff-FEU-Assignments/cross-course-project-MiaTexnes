@@ -1,26 +1,20 @@
 import { getQueryStringParam } from "../helpers/getQueryStringParam.js";
 import { url } from "../constants.js";
 import { formattedPrice } from "../helpers/formattedPrice.js";
+import {
+    showLoadingIndicator,
+    hideLoadingIndicator,
+    showErrorIndicator,
+} from "./errorAndLoading.js";
 
-async function fetchProductById(id) {
-    const productUrl = `${url}${id}`;
-    const response = await fetch(productUrl);
+const resultsContainer = document.querySelector("#container-product");
+const errorContainer = document.querySelector("#error-container"); // Ensure this is the correct selector for your error container
 
-    if (!response.ok) {
-        throw new Error(
-            `There was an error fetching the product with id: ${id}`
-        );
-    }
-
-    return response.json();
-}
-
-function displayProduct(product) {
-    document.title = `${product.title} - RainyDays`;
-    const resultsContainer = document.querySelector("#container-product");
+// The buildProductCard function remains unchanged per your request
+function buildProductCard(product) {
     const price = formattedPrice(product.prices.price);
-
-    const productHTML = `<div class="cardSpecific">
+    return `
+    <div class="cardSpecific">
         <img class="product-image" src="${product.images[0].src}" alt="${product.description}" />
         <div class="product-text">
             <h1>${product.name}</h1>
@@ -30,32 +24,51 @@ function displayProduct(product) {
             <p>Color: ${product.attributes[1].terms[0].name}</p>
         </div>
     </div>`;
-
-    resultsContainer.innerHTML = productHTML;
 }
 
-function displayError(error) {
-    const resultsContainer = document.querySelector("#error-container");
-    resultsContainer.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+async function fetchProductById(id) {
+    showLoadingIndicator(resultsContainer);
+    const productUrl = `${url}/${id}`; // Make sure the URL ends with a slash
+    try {
+        const response = await fetch(productUrl);
+
+        if (!response.ok) {
+            throw new Error(
+                `There was an error fetching the product with id: ${id}`
+            );
+        }
+
+        const product = await response.json();
+        return product;
+    } catch (error) {
+        showErrorIndicator(errorContainer, error.message);
+        throw error; // The error is re-thrown to be handled by the caller
+    } finally {
+        hideLoadingIndicator(resultsContainer);
+    }
 }
 
-async function getProduct() {
+async function displayProduct() {
     const id = getQueryStringParam("id");
 
     if (!id) {
-        document.location.href = "/";
+        showErrorIndicator(
+            errorContainer,
+            "No product ID found in the query string."
+        );
         return;
     }
 
     try {
         const product = await fetchProductById(id);
-        displayProduct(product);
+        resultsContainer.innerHTML = buildProductCard(product);
     } catch (error) {
-        displayError(error);
+        // Error handling is already performed in fetchProductById
     }
 }
 
-getProduct();
+// Call displayProduct on page load
+displayProduct();
 
 // import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
 // import { url } from "./constants.js";

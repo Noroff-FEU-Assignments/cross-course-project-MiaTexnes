@@ -3,6 +3,7 @@
 @import "contact.css";
 @import "footer.css";
 @import "cart.css";
+@import "loadingAndError.css";
 
 * {
     font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
