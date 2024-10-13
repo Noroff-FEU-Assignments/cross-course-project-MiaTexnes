@@ -26,3 +26,27 @@ School Project in front-end development
 -   JavaScript code should be well-organized and free of clutter.
 -   Creation of a local WordPress website, utilizing the WooCommerce plugin to manage products, followed by migration to an online hosting service such as One.com.
 -   Retrieval of jacket product data using the WordPress REST API for integration into the Rainy Days website, which is then published via a static hosting service like Netlify.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   gh repo clone https://github.com/Noroff-FEU-Assignments/cross-course-project-MiaTexnes/tree/cms-management
+
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Running
+    ```bash
+    npm run start
+    ```
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/mia-texnes-847b28bb/)
